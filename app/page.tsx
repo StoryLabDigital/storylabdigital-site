@@ -1,5 +1,12 @@
 export default function StoryLabDigitalSite() {
-  const work = [
+  type WorkItem = {
+  title: string;
+  subtitle: "Save Squad" | "Impersonation Invasion" | "Thriller Webinar";
+  description: string;
+  note: string;
+};
+
+  const work: WorkItem[] = [
     {
       title: "Animated Storytelling",
       subtitle: "Save Squad",
@@ -158,6 +165,7 @@ export default function StoryLabDigitalSite() {
                         Cinematic, attention-grabbing visual storytelling built to stop the scroll and sharpen your brand presence.
                       </p>
                       <p className="mt-3 max-w-sm text-sm text-white/65">
+                        Replace the source path only if your uploaded production file uses a different final filename during deployment.
                       </p>
                       <div className="mt-5 grid grid-cols-3 gap-3">
                         {['Save Squad', 'Impersonation', 'Thriller'].map((item) => (
@@ -219,7 +227,7 @@ export default function StoryLabDigitalSite() {
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {work.map((item) => {
-              const videoMap = {
+              const videoMap: Record<WorkItem['subtitle'], string> = {
                 'Save Squad': '/videos/save-squad.mp4',
                 'Impersonation Invasion': '/videos/impersonation-invasion.mp4',
                 'Thriller Webinar': '/videos/thriller-webinar.mp4',
