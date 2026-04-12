@@ -251,8 +251,7 @@ export default function StoryLabDigitalSite() {
                   </div>
                   <div className="px-2 pb-2 pt-5">
                     <p className="text-sm uppercase tracking-[0.24em] text-blue-200/70">{item.title}</p>
-                    <p className="mt-2 text-xs text-white/40">{item.note}</p>
-                    <p className="mt-3 text-sm leading-7 text-white/65">{item.description}</p>
+                                        <p className="mt-3 text-sm leading-7 text-white/65">{item.description}</p>
                   </div>
                 </article>
               );
@@ -351,7 +350,7 @@ export default function StoryLabDigitalSite() {
               <div className="rounded-[2rem] border border-white/10 bg-black/25 p-6">
                 <p className="text-sm font-medium text-white/50">Contact</p>
                 <div className="mt-6 space-y-4 text-sm text-white/80">
-                  <a href="mailto:hello@storylabdigital.co.za" className="block rounded-2xl border border-white/10 px-4 py-4 transition hover:bg-white/5">
+                  <a href="mailto:hello@storylabdigital.co.za?subject=StoryLabDigital%20Enquiry" className="block rounded-2xl border border-white/10 px-4 py-4 transition hover:bg-white/5">
                     hello@storylabdigital.co.za
                   </a>
                                     <a href="https://wa.me/27729857003" className="block rounded-2xl border border-white/10 px-4 py-4 transition hover:bg-white/5">
@@ -359,7 +358,7 @@ export default function StoryLabDigitalSite() {
                   </a>
                 </div>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a href="mailto:hello@storylabdigital.co.za" className="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-black">
+                  <a href="mailto:hello@storylabdigital.co.za?subject=StoryLabDigital%20Enquiry" className="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-black">
                     Email StoryLabDigital
                   </a>
                   <a href="#work" className="rounded-2xl border border-white/15 px-5 py-3 text-sm font-medium text-white">
