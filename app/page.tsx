@@ -72,9 +72,9 @@ export default function StoryLabDigitalSite() {
 
   const highlights = [
     "Clearer communication for complex ideas",
-    "Stronger brand presence and recall",
+    "Stronger brand presence",
     "Fast production powered by AI-driven workflows",
-    "Creative execution that still feels human and intentional",
+    "Creative execution that remains driven and intentional",
   ];
 
   const aboutPoints = [
@@ -155,7 +155,7 @@ export default function StoryLabDigitalSite() {
               <div className="mt-12 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-3">
                 {[
                   ["Fast", "AI-powered production"],
-                  ["Clear", "Business-first storytelling"],
+                  ["Clear", "Business storytelling"],
                   ["Bold", "Premium visual direction"],
                 ].map(([title, text]) => (
                   <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-4">
