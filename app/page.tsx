@@ -148,7 +148,7 @@ export default function StoryLabDigitalSite() {
                   <div className="relative h-full w-full">
                     <video
                       className="h-full w-full object-cover"
-                      src="/videos/thriller-webinar.mp4"
+                      src="/videos/af-karabo.mp4"
                       autoPlay
                       muted
                       loop
