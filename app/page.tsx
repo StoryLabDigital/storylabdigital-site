@@ -127,19 +127,19 @@ export default function StoryLabDigitalSite() {
       <main>
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.25),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_22%)]" />
-          <div className="mx-auto grid max-w-7xl gap-16 px-6 py-24 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-32">
+          <div className="mx-auto grid max-w-7xl gap-16 px-6 py-24 lg:grid-cols-[0.8fr_1.2fr] lg: items-center lg: px-8 lg:py-32">
             <div className="relative z-10 flex flex-col justify-center">
               <div className="mb-6 inline-flex w-fit items-center rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-2 text-sm text-blue-200">
                 One story. Clear message. Strong impact.
               </div>
 
               <h1
-                className={`${headingFont.className} max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl`}
+                className={`${headingFont.className} max-w-2xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl`}
               >
                 We turn business stories and complex ideas into video people actually understand and remember.
               </h1>
 
-              <p className="mt-6 max-w-xl text-lg leading-8 text-white/70">
+              <p className="mt-6 max-w-lg text-lg leading-8 text-white/70">
                 StoryLabDigital creates animated explainers, campaign visuals, and cinematic brand content for corporates and growing SMEs that need clarity, attention, and a stronger brand presence.
               </p>
 
@@ -174,7 +174,7 @@ export default function StoryLabDigitalSite() {
 
             <div className="relative z-10">
               <div className="rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-black/40">
-                <div className="aspect-video overflow-hidden rounded-[1.5rem] border border-white/10 bg-neutral-900">
+                <div className="aspect-[16/10] overflow-hidden rounded-[1.5rem] border border-white/10 bg-neutral-900">
                   <div className="relative h-full w-full">
                     <video
                       className="h-full w-full object-cover"
