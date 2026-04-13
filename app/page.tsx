@@ -148,13 +148,13 @@ export default function StoryLabDigitalSite() {
                   href="#contact"
                   className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.01]"
                 >
-                  Book a Call
+                  Get In Touch
                 </a>
                 <a
                   href="#work"
                   className="rounded-2xl border border-white/15 px-6 py-3 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/5"
                 >
-                  Watch Our Work
+                  Our Work
                 </a>
               </div>
 
