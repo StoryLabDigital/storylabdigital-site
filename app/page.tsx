@@ -400,7 +400,7 @@ export default function StoryLabDigitalSite() {
                     href="https://wa.me/27729857003"
                     className="block rounded-2xl border border-white/10 px-4 py-4 transition hover:bg-white/5"
                   >
-                    Chat on WhatsApp: +27 72 985 7003
+                    Chat on WhatsApp
                   </a>
                 </div>
                 <div className="mt-6 flex flex-wrap gap-3">
