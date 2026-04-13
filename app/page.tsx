@@ -195,6 +195,9 @@ export default function StoryLabDigitalSite() {
         </section>
 
         <section className="border-y border-white/10 bg-black/30">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        </div>
           <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 text-sm text-white/55 lg:grid-cols-3 lg:px-8">
             <p>Long documents get ignored.</p>
             <p>Presentations get forgotten.</p>
@@ -202,7 +205,7 @@ export default function StoryLabDigitalSite() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8 border-t border-white/10">
+        <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-blue-300/80">
@@ -223,7 +226,9 @@ export default function StoryLabDigitalSite() {
             </div>
           </div>
         </section>
-
+              <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+            </div>
         <section id="work" className="mx-auto max-w-7xl px-6 py-24 lg:px-8 bg-white/[0.02] rounded-[2.5rem]">
           <div className="max-w-2xl">
             <p className="text-sm uppercase tracking-[0.3em] text-blue-300/80">Selected Work</p>
@@ -277,8 +282,10 @@ export default function StoryLabDigitalSite() {
             ))}
           </div>
         </section>
-
-        <section id="services" className="mx-auto max-w-7xl px-6 py-24 lg:px-8 border-t border-white/10">
+           <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+          </div> 
+        <section id="services" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-blue-300/80">What We Do</p>
@@ -306,7 +313,9 @@ export default function StoryLabDigitalSite() {
             </div>
           </div>
         </section>
-
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        </div>
         <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-8 lg:p-10">
             <div className="grid gap-8 lg:grid-cols-2">
@@ -331,8 +340,10 @@ export default function StoryLabDigitalSite() {
             </div>
           </div>
         </section>
-
-        <section id="process" className="mx-auto max-w-7xl px-6 py-24 lg:px-8 border-t border-white/10">
+             <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+          </div>   
+        <section id="process" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm uppercase tracking-[0.3em] text-blue-300/80">Process</p>
             <h2
@@ -356,7 +367,9 @@ export default function StoryLabDigitalSite() {
             ))}
           </div>
         </section>
-
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+          </div>
         <section id="contact" className="mx-auto max-w-7xl px-6 pb-24 pt-10 lg:px-8">
           <div className="rounded-[2rem] border border-blue-400/20 bg-gradient-to-br from-blue-500/15 via-white/5 to-white/5 p-8 lg:p-12">
             <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
