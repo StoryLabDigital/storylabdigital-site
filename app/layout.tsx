@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.storylabdigital.co.za"),
   title: "StoryLabDigital | Visual Storytelling for Business",
   description:
     "We turn business stories and complex ideas into cinematic video content that people actually understand and remember.",
@@ -27,13 +28,20 @@ export const metadata: Metadata = {
     siteName: "StoryLabDigital",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://www.storylabdigital.co.za/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "StoryLabDigital | Visual Storytelling for Business",
       },
     ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "StoryLabDigital",
+    description:
+      "We turn business stories and complex ideas into cinematic video content that people actually understand and remember.",
+    images: ["https://www.storylabdigital.co.za/og-image.jpg"],
   },
 };
 
