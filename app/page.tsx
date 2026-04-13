@@ -165,7 +165,6 @@ export default function StoryLabDigitalSite() {
                         Cinematic, attention-grabbing visual storytelling built to stop the scroll and sharpen your brand presence.
                       </p>
                       <p className="mt-3 max-w-sm text-sm text-white/65">
-                        Replace the source path only if your uploaded production file uses a different final filename during deployment.
                       </p>
                       <div className="mt-5 grid grid-cols-3 gap-3">
                         {['Save Squad', 'Impersonation', 'Thriller'].map((item) => (
@@ -221,7 +220,7 @@ export default function StoryLabDigitalSite() {
               See what your brand could look like.
             </h2>
             <p className="mt-4 text-lg text-white/65">
-              A mix of animation, concept-driven storytelling, and cinematic promo work designed to hold attention and make the message stick.
+              A mix of animation, concept-driven storytelling, and cinematic promo work designed to hold attention.
             </p>
           </div>
 
@@ -277,7 +276,7 @@ export default function StoryLabDigitalSite() {
                 Visual storytelling built for business.
               </h2>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-white/70">
-                StoryLabDigital helps corporates and SMEs explain, promote, and elevate their message through animated explainer videos and creative visual content that lands.
+                StoryLabDigital helps corporates and SMEs explain, promote, and elevate their message through animated explainer videos and creative visual content.
               </p>
             </div>
             <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6">
@@ -344,7 +343,7 @@ export default function StoryLabDigitalSite() {
                   Let’s turn your story into something people actually watch.
                 </h2>
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-white/70">
-                  Whether you need an animated explainer, a campaign visual, or a sharper way to present your message, StoryLabDigital is built to help your brand stand out. This version is now structured for live deployment with embedded showcase videos and direct contact paths.
+                  Whether you need an animated explainer, a campaign visual, or a sharper way to present your message, StoryLabDigital is built to help your brand stand out.
                 </p>
               </div>
               <div className="rounded-[2rem] border border-white/10 bg-black/25 p-6">
