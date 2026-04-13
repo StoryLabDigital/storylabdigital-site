@@ -180,26 +180,12 @@ export default function StoryLabDigitalSite() {
                       controls={false}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                    <div className="absolute inset-x-0 top-0 flex items-center justify-between p-6 text-xs uppercase tracking-[0.25em] text-white/50">
-                      <span>Featured Reel</span>
-                      <span>AF Karabo</span>
-                    </div>
-                    <div className="absolute inset-x-0 bottom-0 p-6">
+                    <div className="absolute inset-x-0 bottom-0 p-8">
                       <p
                         className={`${headingFont.className} max-w-sm text-2xl font-medium leading-tight text-white`}
                       >
                         Cinematic, attention-grabbing visual storytelling built to stop the scroll and sharpen your brand presence.
                       </p>
-                      <div className="mt-5 grid grid-cols-3 gap-3">
-                        {["Save Squad", "Impersonation", "Thriller"].map((item) => (
-                          <div
-                            key={item}
-                            className="rounded-2xl border border-white/10 bg-black/40 p-3 text-xs text-white/70 backdrop-blur-sm"
-                          >
-                            {item}
-                          </div>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </div>
