@@ -14,9 +14,26 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "StoryLabDigital | Visual Storytelling for Business",
-  description: "We turn business stories and complex ideas into cinematic video content that people actually understand and remember.",
+  description:
+    "We turn business stories and complex ideas into cinematic video content that people actually understand and remember.",
   icons: {
     icon: "/icon.png",
+  },
+  openGraph: {
+    title: "StoryLabDigital",
+    description:
+      "We turn business stories and complex ideas into cinematic video content that people actually understand and remember.",
+    url: "https://www.storylabdigital.co.za",
+    siteName: "StoryLabDigital",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "StoryLabDigital | Visual Storytelling for Business",
+      },
+    ],
+    type: "website",
   },
 };
 
