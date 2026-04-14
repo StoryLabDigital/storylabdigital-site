@@ -14,12 +14,13 @@ export default function StoryLabDigitalSite() {
   const heroVideo = "/videos/af-karabo.mp4";
 
   const videos = [
-    "clickbait-chaos.mp4",
-    "ebnet-financial-roadmap.mp4",
+    "save-squad.mp4",
     "kayak-hippo.mp4",
+    "clickbait-chaos.mp4",
+    "wifi-trap.mp4",
+    "ebnet-financial-roadmap.mp4",
     "reforms-in-the-roar.mp4",
     "seeds-of-growth.mp4",
-    "wifi-trap.mp4",
     "ebnet-top-gun.mp4",
     "motswedi-corporate-video.mp4",
   ];
