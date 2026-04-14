@@ -110,21 +110,7 @@ export default function StoryLabDigitalSite() {
               Visual storytelling for business
             </p>
           </div>
-
-          <nav className="hidden gap-6 text-sm text-white/70 md:flex">
-            <a href="#work" className="transition hover:text-white">
-              Work
-            </a>
-            <a href="#use-cases" className="transition hover:text-white">
-              Use Cases
-            </a>
-            <a href="#process" className="transition hover:text-white">
-              Process
-            </a>
-            <a href="#contact" className="transition hover:text-white">
-              Contact
-            </a>
-          </nav>
+          
         </div>
       </header>
 
