@@ -1,4 +1,7 @@
+"use client";
+
 import { Space_Grotesk, Manrope } from "next/font/google";
+import { motion } from "framer-motion";
 
 const headingFont = Space_Grotesk({
   subsets: ["latin"],
@@ -64,6 +67,24 @@ export default function StoryLabDigitalSite() {
     },
   ];
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 28 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" as const },
+    },
+  };
+
+  const stagger = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.12,
+      },
+    },
+  };
+
   const Divider = () => (
     <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
       <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
@@ -79,7 +100,13 @@ export default function StoryLabDigitalSite() {
     title: string;
     text?: string;
   }) => (
-    <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+    <motion.div
+      className="mx-auto max-w-4xl px-6 text-center lg:px-8"
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.35 }}
+    >
       {eyebrow ? (
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.28em] text-blue-300/80">
           {eyebrow}
@@ -95,7 +122,7 @@ export default function StoryLabDigitalSite() {
           {text}
         </p>
       ) : null}
-    </div>
+    </motion.div>
   );
 
   return (
@@ -110,7 +137,6 @@ export default function StoryLabDigitalSite() {
               Visual storytelling for business
             </p>
           </div>
-          
         </div>
       </header>
 
@@ -119,24 +145,36 @@ export default function StoryLabDigitalSite() {
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.22),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.07),transparent_22%)]" />
           <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8 lg:py-28">
-            <div className="relative z-10">
-              <p className="mb-5 inline-flex w-fit items-center rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-2 text-sm text-blue-200">
+            <motion.div
+              className="relative z-10"
+              variants={stagger}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.p
+                variants={fadeUp}
+                className="mb-5 inline-flex w-fit items-center rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-2 text-sm text-blue-200"
+              >
                 One story. Clear message. Strong impact.
-              </p>
+              </motion.p>
 
-              <h1
+              <motion.h1
+                variants={fadeUp}
                 className={`${headingFont.className} max-w-2xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl`}
               >
                 We turn business messages into video people actually understand,
                 remember, and act on.
-              </h1>
+              </motion.h1>
 
-              <p className="mt-5 max-w-md text-base leading-7 text-white/70 sm:text-lg">
+              <motion.p
+                variants={fadeUp}
+                className="mt-5 max-w-md text-base leading-7 text-white/70 sm:text-lg"
+              >
                 From explainers to campaign visuals, StoryLabDigital helps brands
                 communicate with clarity, impact, and cinematic edge.
-              </p>
+              </motion.p>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="#work"
                   className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.01]"
@@ -149,10 +187,15 @@ export default function StoryLabDigitalSite() {
                 >
                   Start a Project
                 </a>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
-            <div className="relative z-10">
+            <motion.div
+              className="relative z-10"
+              initial={{ opacity: 0, scale: 0.96, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               <div className="rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl shadow-black/40">
                 <div className="aspect-video overflow-hidden rounded-[1.5rem] border border-white/10 bg-neutral-900">
                   <video
@@ -166,7 +209,7 @@ export default function StoryLabDigitalSite() {
                   />
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -181,11 +224,21 @@ export default function StoryLabDigitalSite() {
           />
         </section>
 
-        <section id="work" className="mx-auto mt-12 max-w-7xl px-6 lg:px-8">
+        <motion.section
+          id="work"
+          className="mx-auto mt-12 max-w-7xl px-6 lg:px-8"
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+        >
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {videos.map((video) => (
-              <div
+              <motion.div
                 key={video}
+                variants={fadeUp}
+                whileHover={{ y: -6, scale: 1.01 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
                 className="group aspect-video overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/30"
               >
                 <video
@@ -197,10 +250,10 @@ export default function StoryLabDigitalSite() {
                   playsInline
                   controls
                 />
-              </div>
+              </motion.div>
             ))}
           </div>
-        </section>
+        </motion.section>
 
         <Divider />
 
@@ -224,19 +277,27 @@ export default function StoryLabDigitalSite() {
           />
         </section>
 
-        <section className="mx-auto mt-12 grid max-w-7xl gap-8 px-6 md:grid-cols-3 lg:px-8">
+        <motion.section
+          className="mx-auto mt-12 grid max-w-7xl gap-8 px-6 md:grid-cols-3 lg:px-8"
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {useCases.map((item) => (
-            <div
+            <motion.div
               key={item.title}
+              variants={fadeUp}
+              whileHover={{ y: -4 }}
               className="rounded-[2rem] border border-white/10 bg-white/5 p-6"
             >
               <h3 className={`${headingFont.className} text-2xl font-semibold text-white`}>
                 {item.title}
               </h3>
               <p className="mt-4 text-base leading-7 text-white/65">{item.text}</p>
-            </div>
+            </motion.div>
           ))}
-        </section>
+        </motion.section>
 
         <Divider />
 
@@ -249,7 +310,13 @@ export default function StoryLabDigitalSite() {
           />
         </section>
 
-        <section className="mx-auto mt-12 max-w-7xl px-6 lg:px-8">
+        <motion.section
+          className="mx-auto mt-12 max-w-7xl px-6 lg:px-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeUp}
+        >
           <div className="grid gap-10 rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/6 to-blue-500/5 p-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:p-8">
             <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/30">
               <div className="aspect-video">
@@ -280,7 +347,7 @@ export default function StoryLabDigitalSite() {
               </p>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         <Divider />
 
@@ -293,10 +360,18 @@ export default function StoryLabDigitalSite() {
           />
         </section>
 
-        <section className="mx-auto mt-12 grid max-w-7xl gap-6 px-6 md:grid-cols-2 xl:grid-cols-4 lg:px-8">
+        <motion.section
+          className="mx-auto mt-12 grid max-w-7xl gap-6 px-6 md:grid-cols-2 xl:grid-cols-4 lg:px-8"
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {process.map((item) => (
-            <div
+            <motion.div
               key={item.step}
+              variants={fadeUp}
+              whileHover={{ y: -4 }}
               className="rounded-[2rem] border border-white/10 bg-white/5 p-6"
             >
               <p className="text-sm text-blue-200/80">{item.step}</p>
@@ -304,9 +379,9 @@ export default function StoryLabDigitalSite() {
                 {item.title}
               </h3>
               <p className="mt-4 text-sm leading-7 text-white/65">{item.text}</p>
-            </div>
+            </motion.div>
           ))}
-        </section>
+        </motion.section>
 
         <Divider />
 
@@ -319,7 +394,13 @@ export default function StoryLabDigitalSite() {
           />
         </section>
 
-        <section className="mx-auto max-w-4xl px-6 lg:px-8">
+        <motion.section
+          className="mx-auto max-w-4xl px-6 lg:px-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.25 }}
+          variants={fadeUp}
+        >
           <div className="rounded-[2rem] border border-blue-400/20 bg-gradient-to-br from-blue-500/15 via-white/5 to-white/5 p-8 text-center lg:p-12">
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a
@@ -340,7 +421,7 @@ export default function StoryLabDigitalSite() {
               hello@storylabdigital.co.za
             </p>
           </div>
-        </section>
+        </motion.section>
       </main>
     </div>
   );
