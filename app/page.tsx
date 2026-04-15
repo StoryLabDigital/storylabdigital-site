@@ -385,6 +385,43 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
+        {/* CREDIBILITY */}
+        <motion.section
+          className="mx-auto max-w-5xl px-6 lg:px-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.25 }}
+          variants={fadeUp}
+        >
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 text-center lg:p-10">
+            <p className="text-sm font-medium uppercase tracking-[0.28em] text-blue-300/80">
+              Credibility
+            </p>
+            <h3
+              className={`${headingFont.className} mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl`}
+            >
+              Trusted by businesses who need clarity, not noise.
+            </h3>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/65">
+              Based in Cape Town, South Africa · Working with clients locally and remotely
+            </p>
+
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-5 text-sm text-white/75">
+                StoryLabDigital
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-5 text-sm text-white/75">
+                Cape Town, South Africa
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-5 text-sm text-white/75">
+                hello@storylabdigital.co.za
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
+        <Divider />
+
         {/* CTA */}
         <section id="contact" className="pb-24">
           <SectionIntro
