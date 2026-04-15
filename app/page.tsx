@@ -22,7 +22,7 @@ export default function StoryLabDigitalSite() {
     "kayak-hippo.mp4",
     "clickbait-chaos.mp4",
     "reforms-in-the-roar.mp4",
-    "ebnet-financial-roadmap.mp4",
+    "thriller-webinar.mp4",
     "wifi-trap.mp4",
     "impersonation-invasion.mp4",
     "ebnet-top-gun.mp4",
