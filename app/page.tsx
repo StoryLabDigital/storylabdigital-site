@@ -394,9 +394,6 @@ export default function StoryLabDigitalSite() {
           variants={fadeUp}
         >
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 text-center lg:p-10">
-            <p className="text-sm font-medium uppercase tracking-[0.28em] text-blue-300/80">
-              Credibility
-            </p>
             <h3
               className={`${headingFont.className} mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl`}
             >
