@@ -14,7 +14,7 @@ const bodyFont = Manrope({
 });
 
 export default function StoryLabDigitalSite() {
-  const heroVideo = "/videos/af-karabo.mp4";
+  const heroVideo = "/videos/AER.mp4";
   const featuredVideo = "/videos/motswedi-corporate-video.mp4";
 
   const videos = [
