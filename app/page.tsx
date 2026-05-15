@@ -18,7 +18,7 @@ export default function StoryLabDigitalSite() {
   const featuredVideo = "/videos/motswedi-corporate-video.mp4";
 
   const videos = [
-    "save-squad.mp4",
+    "cofi.mp4",
     "kayak-hippo.mp4",
     "clickbait-chaos.mp4",
     "reforms-in-the-roar.mp4",
