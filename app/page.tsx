@@ -16,6 +16,7 @@ const bodyFont = Manrope({
 export default function StoryLabDigitalSite() {
   const heroVideo = "/videos/AER.mp4";
   const featuredVideo = "/videos/motswedi-corporate-video.mp4";
+  const sldLogo = "/icon.png";
 
   const videos = [
     "cofi.mp4",
@@ -134,6 +135,16 @@ export default function StoryLabDigitalSite() {
     </motion.div>
   );
 
+  const VideoWatermark = () => (
+    <div className="pointer-events-none absolute bottom-3 right-3 z-30 flex h-11 w-11 items-center justify-center rounded-xl border border-white/15 bg-black/45 p-1.5 shadow-lg backdrop-blur-md">
+      <img
+        src={sldLogo}
+        alt="SLD"
+        className="h-full w-full object-contain opacity-90"
+      />
+    </div>
+  );
+
   return (
     <div className={`${bodyFont.className} min-h-screen bg-neutral-950 text-white`}>
       <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/85 backdrop-blur">
@@ -150,11 +161,15 @@ export default function StoryLabDigitalSite() {
       </header>
 
       <main>
-        {/* HERO */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.22),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.07),transparent_22%)]" />
           <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8 lg:py-28">
-            <motion.div className="relative z-10" variants={stagger} initial="hidden" animate="visible">
+            <motion.div
+              className="relative z-10"
+              variants={stagger}
+              initial="hidden"
+              animate="visible"
+            >
               <motion.p
                 variants={fadeUp}
                 className="mb-5 inline-flex w-fit items-center rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-2 text-sm text-blue-200"
@@ -179,10 +194,16 @@ export default function StoryLabDigitalSite() {
               </motion.p>
 
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
-                <a href="#work" className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.01]">
+                <a
+                  href="#work"
+                  className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.01]"
+                >
                   Our Work
                 </a>
-                <a href="#contact" className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5">
+                <a
+                  href="#contact"
+                  className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5"
+                >
                   Start a Project
                 </a>
               </motion.div>
@@ -195,8 +216,17 @@ export default function StoryLabDigitalSite() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <div className="rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl shadow-black/40">
-                <div className="aspect-video overflow-hidden rounded-[1.5rem] border border-white/10 bg-neutral-900">
-                  <video className="h-full w-full object-cover" src={heroVideo} autoPlay muted loop playsInline controls={false} />
+                <div className="relative aspect-video overflow-hidden rounded-[1.5rem] border border-white/10 bg-neutral-900">
+                  <video
+                    className="h-full w-full object-cover"
+                    src={heroVideo}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls={false}
+                  />
+                  <VideoWatermark />
                 </div>
               </div>
             </motion.div>
@@ -205,7 +235,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* WORK */}
         <section>
           <SectionIntro
             eyebrow="The Work"
@@ -227,7 +256,12 @@ export default function StoryLabDigitalSite() {
               <motion.div
                 key={video}
                 variants={fadeUp}
-                whileHover={{ y: -12, scale: 1.03, rotateX: 4, rotateY: 4 }}
+                whileHover={{
+                  y: -12,
+                  scale: 1.03,
+                  rotateX: 4,
+                  rotateY: 4,
+                }}
                 transition={{ duration: 0.35 }}
                 className="group relative aspect-video overflow-hidden rounded-[1.75rem] border border-blue-400/15 bg-black/40 shadow-[0_0_40px_rgba(59,130,246,0.08)] backdrop-blur-sm hover:border-blue-400/40 hover:shadow-[0_0_50px_rgba(59,130,246,0.25)]"
               >
@@ -246,11 +280,7 @@ export default function StoryLabDigitalSite() {
                   controls
                 />
 
-                <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 p-4">
-                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-white/90">
-                    StoryLabDigital
-                  </p>
-                </div>
+                <VideoWatermark />
               </motion.div>
             ))}
           </div>
@@ -258,7 +288,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* PROBLEM */}
         <section>
           <SectionIntro
             eyebrow="The Problem"
@@ -269,7 +298,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* USE CASES */}
         <section id="use-cases">
           <SectionIntro
             eyebrow="What This Solves"
@@ -286,7 +314,12 @@ export default function StoryLabDigitalSite() {
           viewport={{ once: true, amount: 0.2 }}
         >
           {useCases.map((item) => (
-            <motion.div key={item.title} variants={fadeUp} whileHover={{ y: -4 }} className="rounded-[2rem] border border-white/10 bg-white/5 p-6">
+            <motion.div
+              key={item.title}
+              variants={fadeUp}
+              whileHover={{ y: -4 }}
+              className="rounded-[2rem] border border-white/10 bg-white/5 p-6"
+            >
               <h3 className={`${headingFont.className} text-2xl font-semibold text-white`}>
                 {item.title}
               </h3>
@@ -297,7 +330,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* FEATURED */}
         <section>
           <SectionIntro
             eyebrow="Featured Range"
@@ -315,8 +347,17 @@ export default function StoryLabDigitalSite() {
         >
           <div className="grid gap-10 rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/6 to-blue-500/5 p-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:p-8">
             <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/30">
-              <div className="aspect-video">
-                <video className="h-full w-full object-cover" src={featuredVideo} autoPlay muted loop playsInline controls />
+              <div className="relative aspect-video">
+                <video
+                  className="h-full w-full object-cover"
+                  src={featuredVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                />
+                <VideoWatermark />
               </div>
             </div>
 
@@ -324,7 +365,9 @@ export default function StoryLabDigitalSite() {
               <p className="text-sm font-medium uppercase tracking-[0.25em] text-blue-200/75">
                 Featured Project
               </p>
-              <h3 className={`${headingFont.className} mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl`}>
+              <h3
+                className={`${headingFont.className} mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl`}
+              >
                 Business storytelling that still leaves a mark.
               </h3>
               <p className="mt-5 max-w-xl text-base leading-7 text-white/65 sm:text-lg">
@@ -337,7 +380,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* BRANDS */}
         <section>
           <SectionIntro
             eyebrow="Brands"
@@ -360,12 +402,12 @@ export default function StoryLabDigitalSite() {
             {[...clientLogos, ...clientLogos].map((logo, index) => (
               <div
                 key={`${logo}-${index}`}
-                className="flex h-24 min-w-[220px] items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-8 opacity-75 transition hover:border-blue-400/30 hover:opacity-100"
+                className="flex h-24 min-w-[220px] items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] px-8 opacity-90 transition hover:border-blue-400/30 hover:opacity-100"
               >
                 <img
                   src={`/logos/${logo}`}
                   alt={logo.replace(".png", "")}
-                  className="max-h-14 w-auto object-contain grayscale transition duration-300 hover:grayscale-0"
+                  className="max-h-14 w-auto object-contain transition duration-300"
                 />
               </div>
             ))}
@@ -374,7 +416,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* PROCESS */}
         <section id="process">
           <SectionIntro
             eyebrow="The Process"
@@ -391,7 +432,12 @@ export default function StoryLabDigitalSite() {
           viewport={{ once: true, amount: 0.2 }}
         >
           {process.map((item) => (
-            <motion.div key={item.step} variants={fadeUp} whileHover={{ y: -4 }} className="rounded-[2rem] border border-white/10 bg-white/5 p-6">
+            <motion.div
+              key={item.step}
+              variants={fadeUp}
+              whileHover={{ y: -4 }}
+              className="rounded-[2rem] border border-white/10 bg-white/5 p-6"
+            >
               <p className="text-sm text-blue-200/80">{item.step}</p>
               <h3 className={`${headingFont.className} mt-4 text-2xl font-medium text-white`}>
                 {item.title}
@@ -403,7 +449,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* CREDIBILITY */}
         <motion.section
           className="mx-auto max-w-5xl px-6 lg:px-8"
           initial="hidden"
@@ -412,7 +457,9 @@ export default function StoryLabDigitalSite() {
           variants={fadeUp}
         >
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 text-center lg:p-10">
-            <h3 className={`${headingFont.className} mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl`}>
+            <h3
+              className={`${headingFont.className} mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl`}
+            >
               Trusted by businesses who need clarity, not noise.
             </h3>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/65">
@@ -435,7 +482,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* CTA */}
         <section id="contact" className="pb-24">
           <SectionIntro
             eyebrow="Ready To Start?"
