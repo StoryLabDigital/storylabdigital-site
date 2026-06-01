@@ -72,13 +72,13 @@ const clientLogos = [
 
 const TESTIMONIALS = [
   {
-    quote: "Excellent work done and delivered what was requested and more!",
+    quote: "What impressed us most was not just the final product, but the way Chris approached every challenge. Whether it was video production, digital content, webinars, or creative problem-solving, he always found a way to make things work. StoryLabDigital feels less like an external service provider and more like an extension of your team. Reliable, innovative, and always willing to go the extra mile.",
     name: "Leon",
     role: "COO",
     company: "EBnet",
   },
   {
-    quote: "Brought our vision from paper to video and our message was enabled to be delivered in a more interactive and rememarble outcome.",
+    quote: "Working with Chris and StoryLabDigital has been an absolute game changer. From concept to final delivery, every project was handled with creativity, professionalism, and an incredible attention to detail. The ability to take complex ideas and turn them into engaging visual stories is something truly unique. The quality of work consistently exceeded our expectations, and the turnaround times were exceptional.",
     name: "Justin",
     role: "CTO",
     company: "Datagr8",
@@ -88,7 +88,7 @@ const TESTIMONIALS = [
 const ABOUT = {
   founder: "Chris Combrinck",
   role: "Founder & Creative Director",
-  bio: "StoryLabDigital is a Cape Town–based video studio built on one idea: business messages deserve to be understood, not endured. We blend creative storytelling with AI-driven production workflows to deliver sharp, cinematic video — fast.",
+  bio: "StoryLabDigital was built on a simple idea: great stories create attention, but great execution creates results. We help businesses, brands, and individuals transform ideas into engaging digital experiences through video production, AI-powered content creation, visual storytelling, podcasts, webinars, social media content, and digital solutions that actually move the needle. With over 25 years of real-world business experience across operations, sales, technology, media, and digital transformation, we understand both the creative and commercial side of a project. That means we don't just create content that looks good — we create content with purpose. Whether it's a cinematic brand video, an animated explainer, a podcast production, a webinar, or a complete digital campaign, our focus remains the same: create work that captures attention, tells a compelling story, and leaves a lasting impression.",
 };
 
 /* ================================================================= */
@@ -508,7 +508,7 @@ export default function StoryLabDigitalSite() {
 
         {/* ABOUT */}
         <section id="about">
-          <SectionIntro eyebrow="Who We Are" title="A studio, not a stock library." />
+          <SectionIntro eyebrow="Who We Are" title="More Than Content. We Build Digital Experiences." />
         </section>
 
         <motion.section className="mx-auto mt-12 max-w-4xl px-6 lg:px-8"
