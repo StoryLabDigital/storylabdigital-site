@@ -402,12 +402,12 @@ export default function StoryLabDigitalSite() {
             {[...clientLogos, ...clientLogos].map((logo, index) => (
               <div
                 key={`${logo}-${index}`}
-                className="flex h-24 min-w-[220px] items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] px-8 opacity-90 transition hover:border-blue-400/30 hover:opacity-100"
+                className="flex h-24 min-w-[220px] items-center justify-center rounded-2xl border border-white/10 bg-white px-8 shadow-lg shadow-black/20 transition hover:scale-[1.03] hover:border-blue-400/40"
               >
                 <img
                   src={`/logos/${logo}`}
                   alt={logo.replace(".png", "")}
-                  className="max-h-14 w-auto object-contain transition duration-300"
+                  className="max-h-14 w-auto object-contain transition duration-300 hover:scale-110"
                 />
               </div>
             ))}
