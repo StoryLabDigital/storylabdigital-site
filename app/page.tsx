@@ -43,14 +43,14 @@ type Work = {
 };
 
 const WORK: Work[] = [
-  { file: "cofi.mp4", poster: "/posters/cofi.jpg", title: "CoFi", client: "EBnet", category: "Explainer", result: "Turned a complex product into a clear, watchable story." },
+  { file: "cofi.mp4", poster: "/posters/cofi.jpg", title: "CoFi", client: "EBnet", category: "Promo", result: "Opening video for Webinar introducing host." },
   { file: "kayak-hippo.mp4", poster: "/posters/kayak-hippo.jpg", title: "Kayak & Hippo", client: "EBnet", category: "Campaign", result: "Attention-grabbing campaign visual." },
   { file: "clickbait-chaos.mp4", poster: "/posters/clickbait-chaos.jpg", title: "Clickbait Chaos", client: "Datagr8", category: "Awareness", result: "Cut through the noise with a sharp narrative." },
   { file: "reforms-in-the-roar.mp4", poster: "/posters/reforms-in-the-roar.jpg", title: "Reforms in the Roar", client: "Motswedi", category: "Explainer", result: "Made policy change easy to follow." },
   { file: "thriller-webinar.mp4", poster: "/posters/thriller-webinar.jpg", title: "Thriller Webinar", client: "EBnet", category: "Promo", result: "Drove sign-ups with a cinematic teaser." },
   { file: "wifi-trap.mp4", poster: "/posters/wifi-trap.jpg", title: "WiFi Trap", client: "Datagr8", category: "Cyber Awareness", result: "Security message people actually remembered." },
   { file: "impersonation-invasion.mp4", poster: "/posters/impersonation-invasion.jpg", title: "Impersonation Invasion", client: "Datagr8", category: "Cyber Awareness", result: "Brought a fraud risk to life visually." },
-  { file: "ebnet-top-gun.mp4", poster: "/posters/ebnet-top-gun.jpg", title: "EBnet: Top Gun", client: "EBnet", category: "Brand / Promo", result: "Bold concept that strengthened brand presence." },
+  { file: "ebnet-top-gun.mp4", poster: "/posters/ebnet-top-gun.jpg", title: "EBnet: Top Gun", client: "EBnet", category: "Promo", result: "Bold concept that strengthened brand on Webinar opening video." },
   { file: "seeds-of-growth.mp4", poster: "/posters/seeds-of-growth.jpg", title: "Seeds of Growth", client: "Motswedi", category: "Corporate", result: "Communicated growth strategy with clarity." },
 ];
 
