@@ -462,7 +462,7 @@ export default function StoryLabDigitalSite() {
         {/* BRANDS */}
         <section>
           <SectionIntro eyebrow="Brands" title="Brands we have worked with."
-            text="A few of the businesses and platforms we have supported through visual storytelling, digital content, and communication work." />
+            text="A few of the businesses we have supported through visual storytelling, digital content, and communication work." />
         </section>
 
         <motion.section className="relative mx-auto mt-12 max-w-7xl overflow-hidden px-6 py-8 lg:px-8"
@@ -508,7 +508,8 @@ export default function StoryLabDigitalSite() {
 
         {/* ABOUT */}
         <section id="about">
-          <SectionIntro eyebrow="Who We Are" title="More Than Content. We Build Digital Experiences." />
+          <SectionIntro eyebrow="Who We Are" title="More Than Content. 
+          We Build Digital Experiences." />
         </section>
 
         <motion.section className="mx-auto mt-12 max-w-4xl px-6 lg:px-8"
