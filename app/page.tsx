@@ -599,7 +599,7 @@ function ContactForm() {
   const [message, setMessage] = React.useState("");
   const [status, setStatus] = React.useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  const usingFormspree = FORMSPREE_ID && FORMSPREE_ID !== "xzdwlaby";
+  const usingFormspree = Boolean(FORMSPREE_ID);
 
   const submit = async () => {
     if (!usingFormspree) {
