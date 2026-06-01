@@ -589,25 +589,24 @@ export default function StoryLabDigitalSite() {
   );
 }
 
-/* ---- Contact form (Formspree, with mailto fallback) ---- */
+/* ---- Contact form (Formspree) ---- */
 function ContactForm() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [company, setCompany] = React.useState("");
-  const [type, setType] = React.useState("Explainer");
-  const [budget, setBudget] = React.useState("R10k – R30k");
+  const [type, setType] = React.useState("");
+  const [budget, setBudget] = React.useState("");
   const [message, setMessage] = React.useState("");
   const [status, setStatus] = React.useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const usingFormspree = Boolean(FORMSPREE_ID);
 
   const submit = async () => {
-    if (!usingFormspree) {
-      const subject = encodeURIComponent(`Project Enquiry — ${company || name || "New lead"}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nCompany: ${company}\nProject type: ${type}\nBudget: ${budget}\n\n${message}`);
-      window.location.href = `mailto:hello@storylabdigital.co.za?subject=${subject}&body=${body}`;
+    if (!name || !email || !type || !budget || !message) {
+      alert("Please complete all required fields.");
       return;
     }
+
     try {
       setStatus("sending");
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
@@ -615,9 +614,15 @@ function ContactForm() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({ name, email, company, type, budget, message }),
       });
+
       if (res.ok) {
         setStatus("sent");
-        setName(""); setEmail(""); setCompany(""); setMessage("");
+        setName("");
+        setEmail("");
+        setCompany("");
+        setType("");
+        setBudget("");
+        setMessage("");
       } else {
         setStatus("error");
       }
@@ -626,7 +631,10 @@ function ContactForm() {
     }
   };
 
-  const field = "w-full rounded-xl border border-white/15 bg-black/30 px-4 py-3 text-sm text-white placeholder-white/40 outline-none transition focus:border-blue-400/50";
+  const field =
+    "w-full rounded-xl border border-white/15 bg-black/30 px-4 py-3 text-sm text-white placeholder-white/40 outline-none transition focus:border-blue-400/50";
+
+  const label = "mb-2 block text-sm font-medium text-white/70";
 
   if (status === "sent") {
     return (
@@ -643,38 +651,71 @@ function ContactForm() {
   return (
     <div className="rounded-[2rem] border border-blue-400/20 bg-gradient-to-br from-blue-500/15 via-white/5 to-white/5 p-6 lg:p-8">
       <div className="grid gap-4 sm:grid-cols-2">
-        <input className={field} placeholder="Your name" value={name} onChange={(e) => setName(e.target.value)} />
-        <input className={field} type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input className={field} placeholder="Company" value={company} onChange={(e) => setCompany(e.target.value)} />
-        <select className={field} value={type} onChange={(e) => setType(e.target.value)}>
-          <option className="bg-neutral-900">Explainer</option>
-          <option className="bg-neutral-900">Campaign / Promo</option>
-          <option className="bg-neutral-900">Corporate / Brand</option>
-          <option className="bg-neutral-900">Training / Internal</option>
-          <option className="bg-neutral-900">Other</option>
+        <div>
+          <label className={label}>Your Name *</label>
+          <input className={field} placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} />
+        </div>
+
+        <div>
+          <label className={label}>Email Address *</label>
+          <input className={field} type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </div>
+
+        <div>
+          <label className={label}>Company</label>
+          <input className={field} placeholder="Company name" value={company} onChange={(e) => setCompany(e.target.value)} />
+        </div>
+
+        <div>
+          <label className={label}>Project Type *</label>
+          <select className={field} value={type} onChange={(e) => setType(e.target.value)}>
+            <option className="bg-neutral-900" value="">Select project type</option>
+            <option className="bg-neutral-900">Explainer</option>
+            <option className="bg-neutral-900">Campaign / Promo</option>
+            <option className="bg-neutral-900">Corporate / Brand</option>
+            <option className="bg-neutral-900">Training / Internal</option>
+            <option className="bg-neutral-900">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div className="mt-4">
+        <label className={label}>Estimated Budget *</label>
+        <select className={field} value={budget} onChange={(e) => setBudget(e.target.value)}>
+          <option className="bg-neutral-900" value="">Select budget range</option>
+          <option className="bg-neutral-900">Under R10k</option>
+          <option className="bg-neutral-900">R10k – R30k</option>
+          <option className="bg-neutral-900">R30k – R75k</option>
+          <option className="bg-neutral-900">R75k+</option>
+          <option className="bg-neutral-900">Not sure yet</option>
         </select>
       </div>
-      <select className={`${field} mt-4`} value={budget} onChange={(e) => setBudget(e.target.value)}>
-        <option className="bg-neutral-900">Under R10k</option>
-        <option className="bg-neutral-900">R10k – R30k</option>
-        <option className="bg-neutral-900">R30k – R75k</option>
-        <option className="bg-neutral-900">R75k+</option>
-        <option className="bg-neutral-900">Not sure yet</option>
-      </select>
-      <textarea className={`${field} mt-4 min-h-[120px] resize-y`} placeholder="Tell us about your project…"
-        value={message} onChange={(e) => setMessage(e.target.value)} />
+
+      <div className="mt-4">
+        <label className={label}>Project Details *</label>
+        <textarea
+          className={`${field} min-h-[120px] resize-y`}
+          placeholder="Tell us about your project..."
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+      </div>
+
       {status === "error" ? (
         <p className="mt-3 text-sm text-red-300">Something went wrong. Please email hello@storylabdigital.co.za directly.</p>
       ) : null}
+
       <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
         <button onClick={submit} disabled={status === "sending"}
           className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02] disabled:opacity-60">
-          {status === "sending" ? "Sending…" : "Send Enquiry"}
+          {status === "sending" ? "Sending..." : "Send Enquiry"}
         </button>
+
         <a href="https://wa.me/27729857003" className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5">
           WhatsApp
         </a>
       </div>
+
       <p className="mt-5 text-center text-sm text-white/55">hello@storylabdigital.co.za</p>
     </div>
   );
