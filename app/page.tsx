@@ -36,7 +36,7 @@ export default function StoryLabDigitalSite() {
     },
     {
       title: "Launch with impact",
-      text: "Create campaign and promo visuals that grab attention and strengthen brand presence.",
+      text: "Create campaign visuals that grab attention and strengthen brand presence.",
     },
     {
       title: "Train and communicate better",
@@ -141,7 +141,6 @@ export default function StoryLabDigitalSite() {
       </header>
 
       <main>
-        {/* HERO */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.22),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.07),transparent_22%)]" />
           <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8 lg:py-28">
@@ -215,12 +214,11 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* REEL INTRO */}
         <section>
           <SectionIntro
             eyebrow="The Work"
-            title="See what StoryLabDigital looks like in motion."
-            text="The fastest way to understand what we do is to watch it."
+            title="Selected Work"
+            text="A collection of explainers, campaign visuals, cinematic concepts, and business storytelling projects."
           />
         </section>
 
@@ -237,12 +235,22 @@ export default function StoryLabDigitalSite() {
               <motion.div
                 key={video}
                 variants={fadeUp}
-                whileHover={{ y: -6, scale: 1.01 }}
-                transition={{ duration: 0.25, ease: "easeOut" }}
-                className="group aspect-video overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/30"
+                whileHover={{
+                  y: -12,
+                  scale: 1.03,
+                  rotateX: 4,
+                  rotateY: 4,
+                }}
+                transition={{ duration: 0.35 }}
+                className="group relative aspect-video overflow-hidden rounded-[1.75rem] border border-blue-400/15 bg-black/40 shadow-[0_0_40px_rgba(59,130,246,0.08)] backdrop-blur-sm hover:border-blue-400/40 hover:shadow-[0_0_50px_rgba(59,130,246,0.25)]"
               >
+                <div className="absolute inset-0 z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-blue-500/10" />
+                </div>
+
                 <video
-                  className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+                  className="h-full w-full object-cover transition-all duration-500 group-hover:scale-[1.08] group-hover:brightness-110"
                   src={`/videos/${video}`}
                   autoPlay
                   muted
@@ -250,6 +258,12 @@ export default function StoryLabDigitalSite() {
                   playsInline
                   controls
                 />
+
+                <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 p-4">
+                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-white/90">
+                    StoryLabDigital
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -257,7 +271,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* PROBLEM / SOLUTION */}
         <section>
           <SectionIntro
             eyebrow="The Problem"
@@ -268,7 +281,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* USE CASES */}
         <section id="use-cases">
           <SectionIntro
             eyebrow="What This Solves"
@@ -301,7 +313,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* FEATURED PROJECT */}
         <section>
           <SectionIntro
             eyebrow="Featured Range"
@@ -351,7 +362,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* PROCESS */}
         <section id="process">
           <SectionIntro
             eyebrow="The Process"
@@ -385,7 +395,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* CREDIBILITY */}
         <motion.section
           className="mx-auto max-w-5xl px-6 lg:px-8"
           initial="hidden"
@@ -419,7 +428,6 @@ export default function StoryLabDigitalSite() {
 
         <Divider />
 
-        {/* CTA */}
         <section id="contact" className="pb-24">
           <SectionIntro
             eyebrow="Ready To Start?"
