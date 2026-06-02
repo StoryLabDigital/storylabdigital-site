@@ -305,12 +305,12 @@ export default function StoryLabDigitalSite() {
 
   <a
     href="/the-lab"
-    className="rounded-xl border border-cyan-400/50 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 px-4 py-2 font-medium text-cyan-200 transition-all duration-300 hover:scale-[1.03] hover:border-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
+    className="rounded-xl border border-cyan-400/50 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 px-6 py-2.5 font-medium text-cyan-200 transition-all duration-300 hover:scale-[1.03] hover:border-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
   >
     🧪 THE LAB
   </a>
 
-  <a href="#contact" className="rounded-xl bg-white px-4 py-2 font-medium text-black transition hover:scale-[1.02]">
+  <a href="#contact" className="rounded-xl bg-white px-6 py-2.5 font-medium text-black transition hover:scale-[1.02]">
     Start a Project
   </a>
 </nav>
@@ -621,11 +621,11 @@ export default function StoryLabDigitalSite() {
     <div className="flex flex-col items-center gap-2 md:items-start">
       <p>Cape Town, South Africa · hello@storylabdigital.co.za</p>
       <a
-        href="/the-lab"
-        className="rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2 text-xs font-medium text-cyan-200 transition hover:bg-cyan-500/20 hover:text-cyan-100"
-      >
-        🧪 Enter THE LAB
-      </a>
+  href="/the-lab"
+  className="inline-flex items-center justify-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-5 py-2 text-xs font-medium text-cyan-200 transition-all duration-300 hover:bg-cyan-500/20 hover:text-cyan-100 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)]"
+>
+  🧪 Enter THE LAB
+</a>
     </div>
 
     <p>© {new Date().getFullYear()} StoryLabDigital. All rights reserved.</p>
