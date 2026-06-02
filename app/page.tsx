@@ -615,20 +615,29 @@ export default function StoryLabDigitalSite() {
 
       {/* FOOTER */}
       <footer className="border-t border-white/10 bg-neutral-950">
-  <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 text-sm text-white/50 md:flex-row lg:px-8">
-    <p className={`${headingFont.className} text-white/70`}>StoryLabDigital</p>
+  <div className="mx-auto max-w-7xl px-6 py-10 text-center lg:px-8">
 
-    <div className="flex flex-col items-center gap-2 md:items-start">
-      <p>Cape Town, South Africa · hello@storylabdigital.co.za</p>
+    <p className={`${headingFont.className} text-lg text-white/80`}>
+      StoryLabDigital
+    </p>
+
+    <p className="mt-3 text-sm text-white/50">
+      Cape Town, South Africa · hello@storylabdigital.co.za
+    </p>
+
+    <div className="mt-5">
       <a
-  href="/the-lab"
-  className="inline-flex items-center justify-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-5 py-2 text-xs font-medium text-cyan-200 transition-all duration-300 hover:bg-cyan-500/20 hover:text-cyan-100 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)]"
->
-  🧪 Enter THE LAB
-</a>
+        href="/the-lab"
+        className="inline-flex items-center justify-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-6 py-2.5 text-sm font-medium text-cyan-200 transition-all duration-300 hover:bg-cyan-500/20 hover:text-cyan-100 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)]"
+      >
+        🧪 Enter THE LAB
+      </a>
     </div>
 
-    <p>© {new Date().getFullYear()} StoryLabDigital. All rights reserved.</p>
+    <p className="mt-6 text-sm text-white/40">
+      © {new Date().getFullYear()} StoryLabDigital. All rights reserved.
+    </p>
+
   </div>
 </footer>
     </div>
