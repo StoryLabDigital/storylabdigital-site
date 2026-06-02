@@ -181,8 +181,12 @@ function Magnetic({ children, className = "", href, onClick }: {
 /* ---- Watermark ---- */
 function VideoWatermark() {
   return (
-    <div className="pointer-events-none absolute bottom-3 right-3 z-30 flex h-11 w-11 items-center justify-center rounded-xl border border-white/15 bg-black/45 p-1.5 shadow-lg backdrop-blur-md">
-      <img src={sldLogo} alt="SLD" className="h-full w-full object-contain opacity-90" />
+    <div className="pointer-events-none absolute bottom-3 right-3 z-30">
+      <img
+        src={sldLogo}
+        alt="SLD"
+        className="h-12 w-12 object-contain"
+      />
     </div>
   );
 }
