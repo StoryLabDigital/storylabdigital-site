@@ -42,7 +42,7 @@ const services = [
   { title: "Voice-over", price: "From R150", text: "Narration, explainer reads, character voices and short-form audio." },
   { title: "Avatar Video", price: "From R450", text: "Presenter-style videos, business messages, announcements and explainers." },
   { title: "Social Reel", price: "From R500", text: "Short, sharp content built for LinkedIn, Instagram, WhatsApp or internal sharing." },
-  { title: "Custom Lab Request", price: "Quote-based", text: "Half-baked prompt? Weird idea? Chaotic vision? Send it in. That is why THE LAB exists." },
+  { title: "Custom SLD Lab Request", price: "Quote-based", text: "Half-baked prompt? Weird idea? Chaotic vision? Send it in. That is why THE SLD LAB exists." },
 ];
 
 const steps = [
@@ -55,7 +55,7 @@ const steps = [
 const popularRequests = [
   "Turn my selfie into a cinematic poster",
   "Create a LinkedIn promo video",
-  "Generate product or brand visuals",
+  "Generate product video or brand visuals",
   "Create an AI voice-over for a presentation",
   "Make a talking avatar introduction",
   "Create a short social media reel",
@@ -70,7 +70,7 @@ export default function TheLabPage() {
             <img src={sldLogo} alt="StoryLabDigital" className="h-9 w-9 object-contain" />
             <div>
               <p className={`${headingFont.className} text-lg font-semibold tracking-tight`}>StoryLabDigital</p>
-              <p className="text-xs uppercase tracking-[0.25em] text-white/50">THE LAB</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-white/50">THE SLD LAB</p>
             </div>
           </a>
 
@@ -104,7 +104,7 @@ export default function TheLabPage() {
 
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
                 <a href="#request" className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02]">
-                  Send Your Idea Into THE LAB
+                  Send Your Idea Into THE SLD LAB
                 </a>
                 <a href="#how" className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5">
                   See How It Works
@@ -145,7 +145,7 @@ export default function TheLabPage() {
   href="#request"
   className="mt-6 inline-flex rounded-2xl bg-white px-5 py-3 text-sm font-medium text-black transition hover:scale-[1.02]"
 >
-  Start A Lab Request
+  Start A SLD Lab Request
 </a>
             </motion.div>
           </div>
@@ -172,9 +172,9 @@ export default function TheLabPage() {
         <Divider />
 
         <SectionIntro
-          eyebrow="Why THE LAB Exists"
+          eyebrow="Why THE SLD LAB Exists"
           title="Because paying monthly for tools you barely use is madness with a login screen."
-          text="THE LAB is built for once-off content requests, test ideas, quick campaigns, business visuals and creative experiments that need output without subscription drama."
+          text="THE SLD LAB is built for once-off content requests, test ideas, quick campaigns, business visuals and creative experiments that need output without subscription drama."
         />
 
         <Divider />
@@ -221,9 +221,9 @@ export default function TheLabPage() {
 
         <section>
           <SectionIntro
-            eyebrow="Popular Lab Requests"
+            eyebrow="Popular SLD Lab Requests"
             title="Not sure what to ask for? Start here."
-            text="People often know they need content, but not what to type. These are the kinds of requests THE LAB is built for."
+            text="People often know they need content, but not what to type. These are the kinds of requests THE SLD LAB is built for."
           />
         </section>
 
@@ -244,7 +244,7 @@ export default function TheLabPage() {
               One revision included. Extra changes are quoted separately.
             </h3>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/65">
-              THE LAB is fast, flexible and experimental — but not a bottomless pit of “just one more change.”
+              THE SLD LAB is fast, flexible and experimental — but not a bottomless pit of “just one more change.”
             </p>
           </div>
         </motion.section>
@@ -254,7 +254,7 @@ export default function TheLabPage() {
         <section id="request" className="pb-12">
           <SectionIntro
             eyebrow="Send Your Idea"
-            title="Put your request into THE LAB."
+            title="Put your request into THE SLD LAB."
             text="Complete the form. We’ll review it and send a creation estimate within 24 business hours."
           />
         </section>
@@ -266,7 +266,7 @@ export default function TheLabPage() {
 
       <footer className="border-t border-white/10 bg-neutral-950">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 text-sm text-white/50 md:flex-row lg:px-8">
-          <p className={`${headingFont.className} text-white/70`}>StoryLabDigital THE LAB</p>
+          <p className={`${headingFont.className} text-white/70`}>StoryLabDigital THE SLD LAB</p>
           <p>Cape Town, South Africa · thelab@storylabdigital.co.za</p>
           <p>© {new Date().getFullYear()} StoryLabDigital. All rights reserved.</p>
         </div>
@@ -363,7 +363,7 @@ function LabRequestForm() {
     return (
       <div className="rounded-[2rem] border border-blue-400/20 bg-gradient-to-br from-blue-500/15 via-white/5 to-white/5 p-10 text-center">
         <h3 className={`${headingFont.className} text-2xl font-semibold text-white`}>
-          Your idea has officially entered THE LAB.
+          Your idea has officially entered THE SLD LAB.
         </h3>
         <p className="mt-3 text-white/65">
           We’ll review your request and send a creation estimate within 24 business hours. If approved, payment happens before production starts.
@@ -379,14 +379,14 @@ function LabRequestForm() {
 }}
     className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02]"
   >
-    Back To THE LAB
+    Back To THE SLD LAB
   </button>
 
   <a
     href="https://wa.me/27729857003"
     className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5"
   >
-    WhatsApp THE LAB
+    WhatsApp THE SLD LAB
   </a>
 </div>
       </div>

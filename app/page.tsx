@@ -311,7 +311,7 @@ export default function StoryLabDigitalSite() {
     href="/the-lab"
     className="rounded-xl border border-cyan-400/50 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 px-6 py-2.5 font-medium text-cyan-200 transition-all duration-300 hover:scale-[1.03] hover:border-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
   >
-    🧪 THE LAB
+    🧪 THE SLD LAB
   </a>
 
   <a href="#contact" className="rounded-xl bg-white px-6 py-2.5 font-medium text-black transition hover:scale-[1.02]">
@@ -344,7 +344,7 @@ export default function StoryLabDigitalSite() {
                   Start a Project
                 </Magnetic>
                 <Magnetic href="/the-lab" className="rounded-2xl border border-blue-400/40 bg-blue-400/10 px-6 py-3 text-sm font-medium text-blue-200 transition hover:bg-blue-400/20">
-                  Enter THE LAB
+                  Enter THE SLD LAB
                 </Magnetic>
               </motion.div>
             </motion.div>
@@ -432,7 +432,7 @@ export default function StoryLabDigitalSite() {
   <div className="rounded-[2rem] border border-cyan-400/20 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-white/5 p-10 text-center">
 
     <p className="text-sm font-medium uppercase tracking-[0.35em] text-cyan-300">
-      🧪 THE LAB
+      🧪 THE SLD LAB
     </p>
 
     <h3
@@ -454,7 +454,7 @@ export default function StoryLabDigitalSite() {
     <p className="mx-auto mt-8 max-w-2xl text-base leading-7 text-cyan-100/80">
       Good.
       <br />
-      That's exactly why THE LAB exists.
+      That's exactly why THE SLD LAB exists.
     </p>
 
     <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -479,7 +479,7 @@ export default function StoryLabDigitalSite() {
       href="/the-lab"
       className="mt-10 inline-flex items-center justify-center rounded-2xl border border-cyan-400/50 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 px-8 py-4 text-base font-medium text-cyan-100 transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(34,211,238,0.35)]"
     >
-      🧪  Enter THE LAB
+      🧪  Enter THE SLD LAB
     </a>
 
   </div>
@@ -677,7 +677,7 @@ export default function StoryLabDigitalSite() {
         href="/the-lab"
         className="inline-flex items-center justify-center rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-6 py-2.5 text-sm font-medium text-cyan-200 transition-all duration-300 hover:bg-cyan-500/20 hover:text-cyan-100 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)]"
       >
-        🧪 Enter THE LAB
+        🧪 Enter THE SLD LAB
       </a>
     </div>
 
