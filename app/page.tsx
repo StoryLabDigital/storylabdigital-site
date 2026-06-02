@@ -299,11 +299,21 @@ export default function StoryLabDigitalSite() {
             <p className="text-xs uppercase tracking-[0.25em] text-white/50">Visual storytelling for business</p>
           </div>
           <nav className="hidden items-center gap-7 text-sm text-white/70 md:flex">
-            <a href="#work" className="transition hover:text-white">Work</a>
-            <a href="#about" className="transition hover:text-white">About</a>
-            <a href="#process" className="transition hover:text-white">Process</a>
-            <a href="#contact" className="rounded-xl bg-white px-4 py-2 font-medium text-black transition hover:scale-[1.02]">Start a Project</a>
-          </nav>
+  <a href="#work" className="transition hover:text-white">Work</a>
+  <a href="#about" className="transition hover:text-white">About</a>
+  <a href="#process" className="transition hover:text-white">Process</a>
+
+  <a
+    href="/the-lab"
+    className="rounded-xl border border-cyan-400/50 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 px-4 py-2 font-medium text-cyan-200 transition-all duration-300 hover:scale-[1.03] hover:border-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
+  >
+    🧪 THE LAB
+  </a>
+
+  <a href="#contact" className="rounded-xl bg-white px-4 py-2 font-medium text-black transition hover:scale-[1.02]">
+    Start a Project
+  </a>
+</nav>
         </div>
       </header>
 
@@ -328,6 +338,9 @@ export default function StoryLabDigitalSite() {
                 </Magnetic>
                 <Magnetic href="#contact" className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5">
                   Start a Project
+                </Magnetic>
+                <Magnetic href="/the-lab" className="rounded-2xl border border-blue-400/40 bg-blue-400/10 px-6 py-3 text-sm font-medium text-blue-200 transition hover:bg-blue-400/20">
+                  Enter THE LAB
                 </Magnetic>
               </motion.div>
             </motion.div>
@@ -401,6 +414,29 @@ export default function StoryLabDigitalSite() {
             title="Most businesses don’t have a content problem. They have a communication problem."
             text="Long decks get ignored. Flat messaging gets forgotten. Strong visual storytelling changes that." />
         </section>
+
+        <Divider />
+
+        {/* THE LAB PROMO */}
+        <motion.section className="mx-auto max-w-6xl px-6 lg:px-8"
+          initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={fadeUp}>
+          <div className="grid gap-8 rounded-[2rem] border border-blue-400/20 bg-gradient-to-br from-blue-500/15 via-white/5 to-white/5 p-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:p-10">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.28em] text-blue-200/80">StoryLabDigital THE LAB</p>
+              <h3 className={`${headingFont.className} mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl`}>
+                Need AI content without buying another subscription?
+              </h3>
+            </div>
+            <div>
+              <p className="text-base leading-7 text-white/65">
+                THE LAB is our on-demand creation desk for AI images, short videos, voice-overs, avatar clips and social content. Send the idea. We price it. You approve it. We create it.
+              </p>
+              <a href="/the-lab" className="mt-6 inline-flex rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02]">
+                Enter THE LAB
+              </a>
+            </div>
+          </div>
+        </motion.section>
 
         <Divider />
 
@@ -579,12 +615,22 @@ export default function StoryLabDigitalSite() {
 
       {/* FOOTER */}
       <footer className="border-t border-white/10 bg-neutral-950">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 text-sm text-white/50 md:flex-row lg:px-8">
-          <p className={`${headingFont.className} text-white/70`}>StoryLabDigital</p>
-          <p>Cape Town, South Africa · hello@storylabdigital.co.za</p>
-          <p>© {new Date().getFullYear()} StoryLabDigital. All rights reserved.</p>
-        </div>
-      </footer>
+  <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 text-sm text-white/50 md:flex-row lg:px-8">
+    <p className={`${headingFont.className} text-white/70`}>StoryLabDigital</p>
+
+    <div className="flex flex-col items-center gap-2 md:items-start">
+      <p>Cape Town, South Africa · hello@storylabdigital.co.za</p>
+      <a
+        href="/the-lab"
+        className="rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2 text-xs font-medium text-cyan-200 transition hover:bg-cyan-500/20 hover:text-cyan-100"
+      >
+        🧪 Enter THE LAB
+      </a>
+    </div>
+
+    <p>© {new Date().getFullYear()} StoryLabDigital. All rights reserved.</p>
+  </div>
+</footer>
     </div>
   );
 }
@@ -641,9 +687,21 @@ function ContactForm() {
       <div className="rounded-[2rem] border border-blue-400/20 bg-gradient-to-br from-blue-500/15 via-white/5 to-white/5 p-10 text-center">
         <h3 className={`${headingFont.className} text-2xl font-semibold text-white`}>Thanks — message sent.</h3>
         <p className="mt-3 text-white/65">We&apos;ll be in touch shortly. For anything urgent, WhatsApp us directly.</p>
-        <a href="https://wa.me/27729857003" className="mt-6 inline-flex rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5">
-          WhatsApp
-        </a>
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
+          <button
+            onClick={() => {
+              setStatus("idle");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02]"
+          >
+            Back To StoryLabDigital
+          </button>
+
+          <a href="https://wa.me/27729857003" className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5">
+            WhatsApp
+          </a>
+        </div>
       </div>
     );
   }
