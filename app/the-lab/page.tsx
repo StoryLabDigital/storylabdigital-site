@@ -327,7 +327,7 @@ function LabRequestForm() {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          formName: "StoryLabDigital THE LAB Request",
+          formName: "StoryLabDigital THE SLD LAB Request",
           sendTo: "thelab@storylabdigital.co.za",
           ...form,
         }),
@@ -463,7 +463,7 @@ function LabRequestForm() {
 
       <div className="mt-4">
         <label className={label}>Describe Your Idea *</label>
-        <textarea className={`${field} min-h-[150px] resize-y`} value={form.idea} onChange={(e) => update("idea", e.target.value)} placeholder="Tell us what you want created. Be messy if you need to. THE LAB can handle chaos." />
+        <textarea className={`${field} min-h-[150px] resize-y`} value={form.idea} onChange={(e) => update("idea", e.target.value)} placeholder="Tell us what you want created. Be messy if you need to. THE SLD LAB can handle chaos." />
       </div>
 
       <div className="mt-4">
@@ -480,7 +480,7 @@ function LabRequestForm() {
 
       <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
         <button onClick={submit} disabled={status === "sending"} className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02] disabled:opacity-60">
-          {status === "sending" ? "Sending..." : "Submit To THE LAB"}
+          {status === "sending" ? "Sending..." : "Submit To THE SLD LAB"}
         </button>
 
         <a href="https://wa.me/27729857003" className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5">
