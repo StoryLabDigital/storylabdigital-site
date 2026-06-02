@@ -428,7 +428,7 @@ export default function StoryLabDigitalSite() {
   <div className="rounded-[2rem] border border-cyan-400/20 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-white/5 p-10 text-center">
 
     <p className="text-sm font-medium uppercase tracking-[0.35em] text-cyan-300">
-      🧪 StoryLabDigital THE LAB
+      🧪 THE LAB
     </p>
 
     <h3
@@ -475,7 +475,7 @@ export default function StoryLabDigitalSite() {
       href="/the-lab"
       className="mt-10 inline-flex items-center justify-center rounded-2xl border border-cyan-400/50 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 px-8 py-4 text-base font-medium text-cyan-100 transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(34,211,238,0.35)]"
     >
-      🧪 Enter THE LAB
+      🧪  Enter THE LAB
     </a>
 
   </div>
