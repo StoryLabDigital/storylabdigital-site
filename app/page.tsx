@@ -418,25 +418,68 @@ export default function StoryLabDigitalSite() {
         <Divider />
 
         {/* THE LAB PROMO */}
-        <motion.section className="mx-auto max-w-6xl px-6 lg:px-8"
-          initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={fadeUp}>
-          <div className="grid gap-8 rounded-[2rem] border border-blue-400/20 bg-gradient-to-br from-blue-500/15 via-white/5 to-white/5 p-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:p-10">
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.28em] text-blue-200/80">StoryLabDigital THE LAB</p>
-              <h3 className={`${headingFont.className} mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl`}>
-                Need AI content without buying another subscription?
-              </h3>
-            </div>
-            <div>
-              <p className="text-base leading-7 text-white/65">
-                THE LAB is our on-demand creation desk for AI images, short videos, voice-overs, avatar clips and social content. Send the idea. We price it. You approve it. We create it.
-              </p>
-              <a href="/the-lab" className="mt-6 inline-flex rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02]">
-                Enter THE LAB
-              </a>
-            </div>
-          </div>
-        </motion.section>
+<motion.section
+  className="mx-auto max-w-5xl px-6 lg:px-8"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.25 }}
+  variants={fadeUp}
+>
+  <div className="rounded-[2rem] border border-cyan-400/20 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-white/5 p-10 text-center">
+
+    <p className="text-sm font-medium uppercase tracking-[0.35em] text-cyan-300">
+      🧪 StoryLabDigital THE LAB
+    </p>
+
+    <h3
+      className={`${headingFont.className} mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl`}
+    >
+      Got an idea at 2am?
+    </h3>
+
+    <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/70">
+      Need a video tomorrow?
+      <br />
+      Want an avatar talking to your customers?
+      <br />
+      Need images for a campaign?
+      <br />
+      Have a completely ridiculous idea you want to see come to life?
+    </p>
+
+    <p className="mx-auto mt-8 max-w-2xl text-base leading-7 text-cyan-100/80">
+      Good.
+      <br />
+      That's exactly why THE LAB exists.
+    </p>
+
+    <div className="mt-10 flex flex-wrap justify-center gap-3">
+      {[
+        "AI Images",
+        "AI Videos",
+        "Voice Overs",
+        "Avatar Videos",
+        "Social Content",
+        "Weird Requests Welcome",
+      ].map((item) => (
+        <span
+          key={item}
+          className="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-100"
+        >
+          {item}
+        </span>
+      ))}
+    </div>
+
+    <a
+      href="/the-lab"
+      className="mt-10 inline-flex items-center justify-center rounded-2xl border border-cyan-400/50 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 px-8 py-4 text-base font-medium text-cyan-100 transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(34,211,238,0.35)]"
+    >
+      🧪 Enter THE LAB
+    </a>
+
+  </div>
+</motion.section>
 
         <Divider />
 
