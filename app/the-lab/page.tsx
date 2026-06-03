@@ -59,12 +59,12 @@ const examples: {
   poster?: string;
   label: string;
 }[] = [
-  { type: "image", src: "/lab/poster-1.jpeg", label: "Cinematic poster" },
+  { type: "image", src: "/lab/poster-1.jpeg", label: "Concept art" },
   { type: "video", src: "/lab/reel-1.mp4", poster: "/lab/reel-1.jpeg", label: "Avatar video" },
-  { type: "image", src: "/lab/poster-2.jpeg", label: "Concept art" },
-  { type: "image", src: "/lab/poster-3.jpeg", label: "Cinematic poster" },
-  { type: "video", src: "/lab/reel-2.mp4", poster: "/lab/reel-2.jpeg", label: "Social reel" },
-  { type: "image", src: "/lab/poster-4.jpeg", label: "Social poster" },
+  { type: "image", src: "/lab/poster-2.jpeg", label: "Animated visual" },
+  { type: "image", src: "/lab/poster-3.jpeg", label: "Concept image" },
+  { type: "video", src: "/lab/reel-2.mp4", poster: "/lab/reel-2.jpeg", label: "Animated video" },
+  { type: "image", src: "/lab/poster-4.jpeg", label: "Cinematic poster" },
 ];
 
 const services = [
@@ -177,13 +177,6 @@ export default function TheLabPage() {
                   </div>
                 ))}
               </div>
-
-              <a
-                href="#request"
-                className="mt-6 inline-flex rounded-2xl bg-white px-5 py-3 text-sm font-medium text-black transition hover:scale-[1.02]"
-              >
-                Start A SLD Lab Request
-              </a>
             </motion.div>
           </div>
         </section>
@@ -344,7 +337,7 @@ function SectionIntro({ eyebrow, title, text }: { eyebrow?: string; title: strin
 function ExamplesGallery() {
   return (
     <motion.section
-      className="mx-auto mt-12 grid max-w-7xl gap-5 px-6 sm:grid-cols-2 lg:grid-cols-3 lg:px-8"
+      className="mx-auto mt-12 grid max-w-7xl gap-5 px-6 sm:grid-cols-2 lg:px-8"
       variants={stagger}
       initial="hidden"
       whileInView="visible"
@@ -354,14 +347,14 @@ function ExamplesGallery() {
         <motion.div
           key={item.src}
           variants={fadeUp}
-          className="group relative aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/40"
+          className="group relative aspect-video overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/40"
         >
           {item.type === "image" ? (
             <img
               src={item.src}
               alt={item.label}
               loading="lazy"
-              className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+              className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.03]"
             />
           ) : (
             <video
@@ -372,7 +365,7 @@ function ExamplesGallery() {
               playsInline
               autoPlay
               preload="metadata"
-              className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+              className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.03]"
             />
           )}
 
