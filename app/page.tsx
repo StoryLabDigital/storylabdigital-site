@@ -30,8 +30,8 @@ const FORMSPREE_ID = "xzdwlaby";
 
 const sldLogo = "/icon.png";
 
-const heroVideo = "/videos/AER.mp4";
-const heroPoster = "/posters/AER.jpg";
+const heroVideo = "/videos/whatif.mp4";
+const heroPoster = "/posters/whatif.jpg";
 
 type Work = {
   file: string;
