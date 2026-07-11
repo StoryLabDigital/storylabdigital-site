@@ -1,48 +1,132 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const siteUrl = "https://www.storylabdigital.co.za";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.storylabdigital.co.za"),
-  title: "StoryLabDigital | Visual Storytelling for Business",
-  description:
-    "We turn business stories and complex ideas into cinematic video content that people actually understand and remember.",
-  icons: {
-    icon: "/icon.png",
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: "StoryLabDigital | Ideas Worth Remembering",
+    template: "%s | StoryLabDigital",
   },
-  openGraph: {
-    title: "StoryLabDigital",
-    description:
-      "We turn business stories and complex ideas into cinematic video content that people actually understand and remember.",
-    url: "https://www.storylabdigital.co.za",
-    siteName: "StoryLabDigital",
-    images: [
+
+  description:
+    "StoryLabDigital is an independent creative studio creating ideas worth remembering through film, animation, AI-assisted production and digital experiences.",
+
+  applicationName: "StoryLabDigital",
+
+  authors: [
+    {
+      name: "StoryLabDigital",
+      url: siteUrl,
+    },
+  ],
+
+  creator: "StoryLabDigital",
+  publisher: "StoryLabDigital",
+
+  category: "Creative Studio",
+
+  keywords: [
+    "StoryLabDigital",
+    "independent creative studio",
+    "creative studio Cape Town",
+    "visual storytelling",
+    "animation studio",
+    "AI video production",
+    "corporate video production",
+    "digital experiences",
+    "Ideas Worth Remembering",
+  ],
+
+  alternates: {
+    canonical: "/",
+  },
+
+  icons: {
+    icon: [
       {
-        url: "https://www.storylabdigital.co.za/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "StoryLabDigital | Visual Storytelling for Business",
+        url: "/icon.png",
+        type: "image/png",
       },
     ],
-    type: "website",
+    apple: [
+      {
+        url: "/icon.png",
+        type: "image/png",
+      },
+    ],
   },
+
+  openGraph: {
+    type: "website",
+    locale: "en_ZA",
+    url: siteUrl,
+    siteName: "StoryLabDigital",
+    title: "StoryLabDigital | Ideas Worth Remembering",
+    description:
+      "Independent Creative Studio. Different. On Purpose.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "StoryLabDigital — Ideas Worth Remembering",
+      },
+    ],
+  },
+
   twitter: {
     card: "summary_large_image",
-    title: "StoryLabDigital",
+    title: "StoryLabDigital | Ideas Worth Remembering",
     description:
-      "We turn business stories and complex ideas into cinematic video content that people actually understand and remember.",
-    images: ["https://www.storylabdigital.co.za/og-image.jpg"],
+      "Independent Creative Studio. Different. On Purpose.",
+    images: ["/og-image.jpg"],
   },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  verification: {},
+
+  other: {
+    "theme-color": "#f7f7f5",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+  themeColor: [
+    {
+      media: "(prefers-color-scheme: light)",
+      color: "#f7f7f5",
+    },
+    {
+      media: "(prefers-color-scheme: dark)",
+      color: "#0b0f17",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -52,10 +136,17 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="en-ZA"
+      className={inter.variable}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>
+        <a href="#main-content" className="sld-skip-link">
+          Skip to content
+        </a>
+
+        {children}
+      </body>
     </html>
   );
 }
