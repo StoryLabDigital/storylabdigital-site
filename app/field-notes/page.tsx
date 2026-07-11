@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -85,32 +86,17 @@ export default function FieldNotesPage() {
 
             <div className="mt-16 grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
               <div className="mx-auto w-full max-w-md">
-                <div className="sld-aspect-document bg-[#0b0f17] p-8 text-white shadow-2xl shadow-black/20 sm:p-10">
-                  <div className="flex h-full flex-col justify-between">
-                    <div>
-                      <p className="text-xl font-semibold tracking-[-0.045em]">
-                        storylabdigital
-                        <span className="text-[#316bff]">.</span>
-                      </p>
-
-                      <p className="sld-label mt-16 text-[#316bff]">
-                        Field Notes · Issue 001
-                      </p>
-                    </div>
-
-                    <div>
-                      <h2 className="text-4xl font-light leading-[1.02] tracking-[-0.05em] sm:text-5xl">
-                        Ideas Worth Remembering
-                        <span className="text-[#316bff]">.</span>
-                      </h2>
-
-                      <p className="sld-label mt-8 text-white/50">
-                        Different. On Purpose.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+  <div className="relative sld-aspect-document overflow-hidden bg-[#0b0f17] shadow-2xl shadow-black/20">
+    <Image
+      src="/field-notes/field-notes-issue-001-cover.jpg"
+      alt="StoryLabDigital Field Notes Issue 001 cover"
+      fill
+      sizes="(max-width: 1024px) 100vw, 32rem"
+      className="object-cover"
+      priority
+    />
+  </div>
+</div>
 
               <div>
                 <p className="sld-label text-[#316bff]">
