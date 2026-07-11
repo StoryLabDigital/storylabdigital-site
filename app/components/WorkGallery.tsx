@@ -40,8 +40,14 @@ export default function WorkGallery({
   return (
     <>
       <div className="grid gap-px overflow-hidden bg-black/10 md:grid-cols-2">
-        {items.map((item, index) => {
-          const isWide = index % 5 === 0 || index % 5 === 4;
+  {items.map((item, index) => {
+    const isLeadItem = index === 0;
+    const remainingItemCount = items.length - 1;
+    const isLastItem = index === items.length - 1;
+    const hasOddRemainingCount = remainingItemCount % 2 !== 0;
+
+    const isWide =
+      isLeadItem || (isLastItem && hasOddRemainingCount);
 
           return (
             <article
