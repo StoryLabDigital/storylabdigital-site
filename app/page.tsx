@@ -181,7 +181,7 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-md text-sm leading-6 text-black/50">
-                A question-led film about possibility, curiosity and the
+                A question led film about possibility, curiosity and the
                 courage to explore before everything makes sense.
               </p>
             </div>
@@ -368,7 +368,7 @@ export default function HomePage() {
               </h2>
 
               <p className="sld-body-large mt-7 max-w-2xl text-black/58">
-                Bring the problem, the half-formed thought or the idea that has
+                Bring the problem, the half formed thought or the idea that has
                 been sitting in your head longer than it should.
               </p>
             </div>

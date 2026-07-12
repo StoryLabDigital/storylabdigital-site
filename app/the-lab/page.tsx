@@ -64,7 +64,7 @@ const examples = [
     type: "image",
     src: "/lab/poster-2.jpeg",
     label: "Animated visual",
-    description: "Movement-ready visuals for digital content.",
+    description: "Movement ready visuals for digital content.",
   },
   {
     type: "image",
@@ -77,13 +77,13 @@ const examples = [
     src: "/lab/reel-2.mp4",
     poster: "/lab/reel-2.jpeg",
     label: "Animated video",
-    description: "Short-form motion designed for attention.",
+    description: "Short form motion designed for attention.",
   },
   {
     type: "image",
     src: "/lab/poster-4.jpeg",
     label: "Cinematic poster",
-    description: "High-concept artwork with campaign potential.",
+    description: "High concept artwork with campaign potential.",
   },
 ] as const;
 
@@ -121,7 +121,7 @@ const services = [
     number: "02",
     title: "Short AI video",
     price: "Indicative from R350",
-    text: "Short clips, animated scenes, transitions and social-ready cinematic moments.",
+    text: "Short clips, animated scenes, transitions and social ready cinematic moments.",
   },
   {
     number: "03",
@@ -145,7 +145,7 @@ const services = [
     number: "06",
     title: "Custom Lab request",
     price: "Quoted per request",
-    text: "A half-formed prompt, strange visual thought or idea that does not fit neatly into a category.",
+    text: "A half formed prompt, strange visual thought or idea that does not fit neatly into a category.",
   },
 ];
 
@@ -200,8 +200,8 @@ export default function TheLabPage() {
               </h1>
 
               <p className="mt-8 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
-                Images, short videos, voice-overs, avatars and strange
-                requests—without another subscription, another platform or
+                Images, short videos, voice overs, avatars and strange
+                requests without another subscription, another platform or
                 another piece of software you need to pretend you understand.
               </p>
 
@@ -261,9 +261,9 @@ export default function TheLabPage() {
 
                 <div className="mt-10 grid gap-6 text-base leading-8 text-white/60 sm:grid-cols-2 sm:text-lg">
                   <p>
-                    Sometimes you need one image, one clip, one voice-over or
-                    one weird visual experiment—and you need it without turning
-                    the request into a three-week procurement event.
+                    Sometimes you need one image, one clip, one voice over or
+                    one weird visual experiment and you need it without turning
+                    the request into a three week procurement event.
                   </p>
 
                   <p>
@@ -542,7 +542,7 @@ export default function TheLabPage() {
               </h2>
 
               <p className="mt-7 max-w-lg text-base leading-8 text-white/55 sm:text-lg">
-                Tell us what you are thinking—even when the thought is still
+                Tell us what you are thinking even when the thought is still
                 held together by screenshots, voice notes and unreasonable
                 optimism.
               </p>

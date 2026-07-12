@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact | StoryLabDigital",
     description:
-      "Bring the problem, the half-formed thought or the idea worth building.",
+      "Bring the problem, the half formed thought or the idea worth building.",
     url: "/contact",
   },
 };
@@ -38,7 +38,7 @@ export default function ContactPage() {
 
             <div className="border-t border-black/10 pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
               <p className="sld-body-large max-w-xl text-black/58">
-                Bring the problem, the half-formed thought or the thing that
+                Bring the problem, the half formed thought or the thing that
                 has been sitting in your head longer than it should.
               </p>
             </div>
