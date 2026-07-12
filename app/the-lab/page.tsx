@@ -11,7 +11,7 @@ import LabRequestForm from "@/app/components/LabRequestForm";
 export const metadata: Metadata = {
   title: "The Lab",
   description:
-    "The SLD Lab is StoryLabDigital’s on-demand creative desk for AI imagery, short videos, voice-overs, avatars, social content and unusual creative requests.",
+    "The SLD Lab is StoryLabDigital’s on-demand creative desk for AI imagery, short videos, voice overs, avatars, social content and unusual creative requests.",
   alternates: {
     canonical: "/the-lab",
   },
@@ -58,7 +58,7 @@ const examples = [
     src: "/lab/reel-1.mp4",
     poster: "/lab/reel-1.jpeg",
     label: "Avatar video",
-    description: "Presenter-led content without the studio booking.",
+    description: "Presenter led content without the studio booking.",
   },
   {
     type: "image",
@@ -125,9 +125,9 @@ const services = [
   },
   {
     number: "03",
-    title: "Voice-over",
+    title: "Voice over",
     price: "Indicative from R150",
-    text: "Narration, explainers, character voices, announcements and short-form audio.",
+    text: "Narration, explainers, character voices, announcements and short form audio.",
   },
   {
     number: "04",
@@ -139,7 +139,7 @@ const services = [
     number: "05",
     title: "Social reel",
     price: "Indicative from R500",
-    text: "Short-form content created for LinkedIn, Instagram, WhatsApp or internal campaigns.",
+    text: "Short form content created for LinkedIn, Instagram, WhatsApp or internal campaigns.",
   },
   {
     number: "06",
