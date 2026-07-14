@@ -96,8 +96,7 @@ export default function HomePage() {
               </h1>
 
               <p className="sld-body-large mt-9 max-w-xl text-black/58">
-                We help ambitious businesses, brands and agencies create work
-                that earns attention instead of asking for it.
+                We help people, businesses, brands and agencies turn ideas into stories that people remember. Work that earns attention instead of asking for it.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-3">
