@@ -1,217 +1,214 @@
-import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import SectionHeading from "../components/SectionHeading";
-
-import { siteConfig } from "@/data/site";
-
-export const metadata: Metadata = {
-  title: "Field Notes",
+export const metadata = {
+  title: "Field Notes | StoryLabDigital",
   description:
-    "StoryLabDigital Field Notes explores attention, curiosity, creativity and the ideas worth remembering.",
-  alternates: {
-    canonical: "/field-notes",
-  },
-  openGraph: {
-    title: "Field Notes | StoryLabDigital",
-    description:
-      "Not a brochure. A point of view.",
-    url: "/field-notes",
-  },
+    "Ideas, observations and creative experiments collected by Quill at StoryLabDigital.",
 };
 
-const issueThemes = [
+const notebooks = [
   {
-    number: "01",
-    title: "Attention",
-    text: "Nobody owes your content a second look. Attention must be earned.",
+    number: "002",
+    title: "How to Turn an Idea Into Something Real",
+    description:
+      "A field guide about the distance between thinking and making — and how to cross it.",
+    cover: "/field-notes/notebook-002-cover.jpg",
+    href: "/field-notes/002",
+    label: "Latest field notes",
   },
   {
-    number: "02",
-    title: "Curiosity",
-    text: "The strongest work usually begins with a better question, not a faster answer.",
+  number: "001",
+  title: "Ideas Worth Remembering",
+  description:
+    "The first entry from the StoryLabDigital archive — thoughts on ideas, difference and creating with purpose.",
+    cover: "/field-notes/field-notes-issue-001-cover.jpg",
+    pdf: "/field-notes/StoryLabDigital_FieldNotes_Issue001_Interactive.pdf",
+    label: "From the archive",
   },
-  {
-    number: "03",
-    title: "Difference",
-    text: "Different is not a visual trick. It is a decision made before the work begins.",
-  },
-] as const;
+];
 
 export default function FieldNotesPage() {
   return (
-    <div className="min-h-screen bg-[#f7f7f5] text-[#0b0f17]">
-      <Header />
+    <main className="min-h-screen overflow-hidden bg-[#0d0f12] text-white">
+      {/* Subtle blueprint background */}
+      <div
+        className="pointer-events-none fixed inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.35) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.35) 1px, transparent 1px)
+          `,
+          backgroundSize: "42px 42px",
+        }}
+      />
 
-      <main id="main-content">
-        <section className="border-b border-black/10">
-          <div className="sld-container grid min-h-[62svh] items-end gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
-            <div>
-              <p className="sld-label text-[#316bff]">
-                Field Notes · Issue 001
-              </p>
-
-              <h1 className="sld-display mt-8 max-w-5xl">
-                Not a brochure.
-                <br />
-                A point of view
-                <span className="text-[#316bff]">.</span>
-              </h1>
-            </div>
-
-            <div className="border-t border-black/10 pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-              <p className="sld-body-large max-w-xl text-black/58">
-                Notes on attention, curiosity, creativity and why different is
-                not a style. It is a decision.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="sld-section">
-          <div className="sld-container">
-            <SectionHeading
-              number="001"
-              label="Current issue"
-              title={
-                <>
-                  Ideas Worth Remembering
-                  <span className="text-[#316bff]">.</span>
-                </>
-              }
-              text="Issue 001 sets out the thinking behind StoryLabDigital: work should earn attention, curiosity should come before execution, and creativity should never be reduced to a list of deliverables."
-            />
-
-            <div className="mt-16 grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
-              <div className="mx-auto w-full max-w-md">
-  <div className="relative sld-aspect-document overflow-hidden bg-[#0b0f17] shadow-2xl shadow-black/20">
-    <Image
-      src="/field-notes/field-notes-issue-001-cover.jpg"
-      alt="StoryLabDigital Field Notes Issue 001 cover"
-      fill
-      sizes="(max-width: 1024px) 100vw, 32rem"
-      className="object-cover"
-      priority
-    />
-  </div>
-</div>
-
-              <div>
-                <p className="sld-label text-[#316bff]">
-                  Read the issue
-                </p>
-
-                <h2 className="sld-heading-two mt-8 max-w-4xl">
-                  Open it here.
-                  <br />
-                  Take it with you.
-                </h2>
-
-                <p className="sld-body-large mt-7 max-w-2xl text-black/58">
-                  Read Issue 001 directly in the embedded viewer, open the full
-                  PDF in a new tab or download a copy for later.
-                </p>
-
-                <div className="mt-10 flex flex-wrap gap-3">
-                  <a
-                    href={siteConfig.assets.fieldNotesPdf}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="sld-button sld-button-primary"
-                  >
-                    Open full PDF
-                  </a>
-
-                  <a
-                    href={siteConfig.assets.fieldNotesPdf}
-                    download
-                    className="sld-button sld-button-secondary"
-                  >
-                    Download Issue 001
-                  </a>
-                </div>
-
-                <div className="mt-12 overflow-hidden border border-black/10 bg-white">
-                  <iframe
-                    src={`${siteConfig.assets.fieldNotesPdf}#view=FitH`}
-                    title="StoryLabDigital Field Notes Issue 001"
-                    className="h-[70svh] min-h-[36rem] w-full"
-                  />
-
-                  <div className="border-t border-black/10 px-5 py-4 text-sm text-black/45">
-                    If the PDF does not display in your browser, use “Open full
-                    PDF” above.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="sld-section border-y border-black/10 bg-white">
-          <div className="sld-container">
-            <SectionHeading
-              number="002"
-              label="Inside Issue 001"
-              title={
-                <>
-                  Three ideas.
-                  <br />
-                  One standard.
-                </>
-              }
-            />
-
-            <div className="mt-16">
-              {issueThemes.map((theme) => (
-                <article
-                  key={theme.number}
-                  className="grid gap-5 border-t border-black/15 py-8 md:grid-cols-[5rem_0.7fr_1.3fr] md:items-baseline"
-                >
-                  <p className="sld-label text-[#316bff]">
-                    {theme.number}
-                  </p>
-
-                  <h3 className="text-2xl font-light tracking-[-0.035em] sm:text-3xl">
-                    {theme.title}
-                  </h3>
-
-                  <p className="max-w-2xl text-base leading-7 text-black/55">
-                    {theme.text}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-[#0b0f17] py-20 text-white sm:py-24">
-          <div className="sld-container">
-            <p className="sld-label text-[#316bff]">
-              The next note
+      <section className="relative mx-auto max-w-7xl px-6 pb-20 pt-28 md:px-10 md:pb-28 md:pt-40">
+        <Link
+  href="/"
+  className="mb-10 inline-flex items-center gap-3 text-sm text-white/45 transition hover:text-white"
+>
+  <span aria-hidden="true">←</span>
+  Return to StoryLabDigital
+</Link>
+        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.4em] text-blue-400">
+              StoryLabDigital Archive
             </p>
 
-            <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
-              <h2 className="sld-heading-one max-w-5xl">
-                Ideas should leave a mark.
-                <br />
-                Not just fill a feed.
-              </h2>
+            <h1 className="mt-7 max-w-4xl text-5xl font-light leading-[0.95] tracking-tight md:text-7xl lg:text-8xl">
+              Field Notes
+              <span className="text-blue-500">.</span>
+            </h1>
 
-              <a
-                href="mailto:hello@storylabdigital.co.za?subject=Field%20Notes"
-                className="sld-button sld-button-outline-light w-fit"
-              >
-                Start a conversation
-              </a>
-            </div>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/60 md:text-xl">
+              Observations collected while turning ideas into things people can
+              see, use, question and remember.
+            </p>
           </div>
-        </section>
-      </main>
 
-      <Footer />
-    </div>
+          <div className="border-l border-white/15 pl-6">
+            <p className="text-xs uppercase tracking-[0.3em] text-white/35">
+              Filed by
+            </p>
+
+            <p className="mt-3 text-2xl font-light">Quill</p>
+
+            <p className="mt-2 text-sm leading-relaxed text-white/45">
+              Employee #1
+              <br />
+              StoryLabDigital
+              <br />
+              Cape Town
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-14 flex items-center gap-4 md:mt-16">
+          <div className="h-px flex-1 bg-white/15" />
+          <p className="text-[10px] uppercase tracking-[0.35em] text-white/30">
+            Active notebooks
+          </p>
+          <div className="h-px flex-1 bg-white/15" />
+        </div>
+
+        <div className="mt-14">
+          {notebooks.map((notebook, index) => {
+            const card = (
+              <article className="group grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
+                <div className="relative mx-auto w-full max-w-[560px] lg:mx-0">
+                  <div className="absolute -inset-4 border border-white/[0.07]" />
+
+                  <div className="relative overflow-hidden bg-black shadow-2xl shadow-black/40">
+                    <Image
+                      src={notebook.cover}
+                      alt={`${notebook.title} cover`}
+                      width={1200}
+                      height={1600}
+                      className="h-auto w-full transition duration-700 group-hover:scale-[1.015]"
+                      priority={index === 0}
+                    />
+                  </div>
+
+                  <div className="absolute -bottom-5 -right-4 bg-blue-600 px-4 py-3 text-xs font-semibold uppercase tracking-[0.25em]">
+                    Notebook {notebook.number}
+                  </div>
+                </div>
+
+                <div className="self-center lg:pl-12">
+                  <p className="text-xs font-medium uppercase tracking-[0.35em] text-blue-400">
+                    {notebook.label}
+                  </p>
+
+                  <h2 className="mt-6 max-w-3xl text-3xl font-light leading-tight md:text-5xl">
+                    {notebook.title}
+                  </h2>
+
+                  <p className="mt-7 max-w-xl text-base leading-relaxed text-white/55 md:text-lg">
+                    {notebook.description}
+                  </p>
+
+                  <div className="mt-10 flex items-center gap-5">
+                    <span className="text-sm font-medium">
+                      {notebook.href
+                        ? "Enter the notebook"
+                        : "Open the publication"}
+                    </span>
+
+                    <span
+                      aria-hidden="true"
+                      className="text-blue-400 transition-transform duration-300 group-hover:translate-x-2"
+                    >
+                      →
+                    </span>
+                  </div>
+
+                  {index === 0 && (
+                    <p className="mt-12 max-w-sm border-l border-blue-500/60 pl-5 text-sm italic leading-relaxed text-white/35">
+                      “People wait for confidence. Confidence usually arrives
+                      after starting.”
+                      <span className="mt-2 block not-italic text-white/25">
+                        — Q.
+                      </span>
+                    </p>
+                  )}
+                </div>
+              </article>
+            );
+
+            if (notebook.href) {
+  return (
+    <Link
+      key={notebook.number}
+      href={notebook.href}
+      className={`block ${
+        index > 0
+          ? "mt-24 border-t border-white/10 pt-24 md:mt-32 md:pt-32"
+          : ""
+      }`}
+    >
+      {card}
+    </Link>
+  );
+}
+
+return (
+  <a
+    key={notebook.number}
+    href={notebook.pdf}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`block ${
+      index > 0
+        ? "mt-24 border-t border-white/10 pt-24 md:mt-32 md:pt-32"
+        : ""
+    }`}
+  >
+    {card}
+  </a>
+);
+          })}
+        </div>
+      </section>
+
+      <section className="relative border-t border-white/10 px-6 py-24 md:px-10 md:py-28">
+  <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+    <p className="text-xs uppercase tracking-[0.35em] text-white/50">
+      From Quill&apos;s desk
+    </p>
+
+    <p className="mt-7 text-3xl font-light leading-tight text-white/90 md:text-5xl">
+      Ideas are free.
+      <br />
+      Execution is rare.
+    </p>
+
+    <p className="mt-8 max-w-2xl text-sm leading-relaxed text-white/45">
+      Notebook closed. Coffee cold. Tomorrow we build again.
+    </p>
+  </div>
+</section>
+    </main>
   );
 }
