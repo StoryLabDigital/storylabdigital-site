@@ -261,13 +261,13 @@ export default function HomePage() {
                 aria-label="Explore the Save Squad case study"
                 className="group grid lg:grid-cols-[1.2fr_0.8fr]"
               >
-                <div className="relative aspect-video overflow-hidden lg:aspect-auto lg:min-h-[31rem]">
+                <div className="relative aspect-video overflow-hidden bg-white lg:aspect-auto lg:min-h-[31rem]">
                   <Image
                     src="/save-squad/hero.webp"
                     alt="Save Squad animated heroes created for Alexforbes"
                     fill
                     sizes="(max-width: 1024px) 100vw, 60vw"
-                    className="object-cover transition duration-700 ease-out group-hover:scale-[1.02]"
+                    className="object-contain"
                   />
                 </div>
 
