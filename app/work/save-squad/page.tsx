@@ -60,11 +60,21 @@ export default function SaveSquadCaseStudyPage() {
         <section className="border-b border-black/10">
           <div className="sld-container grid items-end gap-10 py-14 sm:py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-20">
             <div>
-              <p className="sld-label text-[#316bff]">
-                Alexforbes · Animated learning series
-              </p>
+              <div className="flex flex-col items-start gap-4">
+                <Image
+                  src="/logos/alexander-forbes.png"
+                  alt="Alexforbes"
+                  width={500}
+                  height={176}
+                  priority
+                  className="h-auto w-44 sm:w-52"
+                />
+                <p className="sld-label text-[#316bff]">
+                  In collaboration with StoryLabDigital
+                </p>
+              </div>
 
-              <h1 className="sld-display mt-8 max-w-5xl">
+              <h1 className="sld-display mt-7 max-w-5xl">
                 Save Squad
                 <span className="text-[#316bff]">.</span>
               </h1>
