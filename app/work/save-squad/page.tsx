@@ -58,7 +58,7 @@ export default function SaveSquadCaseStudyPage() {
 
       <main id="main-content">
         <section className="border-b border-black/10">
-          <div className="sld-container grid min-h-[48svh] items-end gap-10 py-14 sm:min-h-[52svh] lg:grid-cols-[1.08fr_0.92fr] lg:py-20">
+          <div className="sld-container grid items-end gap-10 py-14 sm:py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-20">
             <div>
               <p className="sld-label text-[#316bff]">
                 Alexforbes · Animated learning series

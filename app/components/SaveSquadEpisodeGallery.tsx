@@ -101,6 +101,20 @@ export default function SaveSquadEpisodeGallery({
             </button>
           );
         })}
+
+        <div className="flex min-h-64 items-center justify-center bg-white p-10 sm:col-span-2 sm:p-14 lg:col-span-2">
+          <div className="w-full max-w-sm text-center">
+            <p className="sld-label mb-8 text-black/35">Created for</p>
+            <Image
+              src="/logos/alexander-forbes.png"
+              alt="Alexforbes"
+              width={500}
+              height={176}
+              sizes="(max-width: 640px) 70vw, 24rem"
+              className="mx-auto h-auto w-full"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
