@@ -58,7 +58,7 @@ export default function SaveSquadCaseStudyPage() {
 
       <main id="main-content">
         <section className="border-b border-black/10">
-          <div className="sld-container grid min-h-[64svh] items-end gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
+          <div className="sld-container grid min-h-[48svh] items-end gap-10 py-14 sm:min-h-[52svh] lg:grid-cols-[1.08fr_0.92fr] lg:py-20">
             <div>
               <p className="sld-label text-[#316bff]">
                 Alexforbes · Animated learning series
@@ -112,7 +112,7 @@ export default function SaveSquadCaseStudyPage() {
           </div>
         </section>
 
-        <section className="sld-section">
+        <section className="py-20 sm:py-24 lg:py-28">
           <div className="sld-container">
             <SectionHeading
               number="001"
@@ -127,7 +127,7 @@ export default function SaveSquadCaseStudyPage() {
               text="Financial education matters early, but information alone rarely holds attention. Alexforbes had a collection of financial-literacy stories rooted in familiar fables and folk parables. The opportunity was to transform that source material into an animated series with energy, personality and a consistent world of its own."
             />
 
-            <div className="mt-20 grid gap-px overflow-hidden bg-black/10 md:grid-cols-2">
+            <div className="mt-12 grid gap-px overflow-hidden bg-black/10 sm:mt-16 md:grid-cols-2">
               <article className="bg-white p-8 sm:p-10">
                 <p className="sld-label text-[#316bff]">The source</p>
                 <h2 className="sld-heading-three mt-6">
@@ -155,7 +155,7 @@ export default function SaveSquadCaseStudyPage() {
           </div>
         </section>
 
-        <section className="sld-section bg-white">
+        <section className="bg-white py-20 sm:py-24 lg:py-28">
           <div className="sld-container">
             <SectionHeading
               number="002"
@@ -170,7 +170,7 @@ export default function SaveSquadCaseStudyPage() {
               text="A series this size needs more than individual good ideas. It needs a repeatable production approach that protects consistency while giving every episode its own personality."
             />
 
-            <div className="mt-16 grid gap-px overflow-hidden bg-black/10 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 grid gap-px overflow-hidden bg-black/10 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
               {deliverables.map((item, index) => (
                 <div key={item} className="bg-[#f7f7f5] p-7 sm:p-8">
                   <p className="sld-label text-[#316bff]">
@@ -185,7 +185,7 @@ export default function SaveSquadCaseStudyPage() {
           </div>
         </section>
 
-        <section className="sld-section bg-[#0b0f17] text-white">
+        <section className="bg-[#0b0f17] py-20 text-white sm:py-24 lg:py-28">
           <div className="sld-container">
             <SectionHeading
               number="003"
@@ -201,13 +201,13 @@ export default function SaveSquadCaseStudyPage() {
               text="Watch the official Save Squad episodes published by Alexforbes. Select an episode below to play it without leaving the case study."
             />
 
-            <div className="mt-16 sm:mt-20">
+            <div className="mt-12 sm:mt-16">
               <SaveSquadEpisodeGallery episodes={saveSquadEpisodes} />
             </div>
           </div>
         </section>
 
-        <section className="sld-section">
+        <section className="py-20 sm:py-24 lg:py-28">
           <div className="sld-container">
             <SectionHeading
               number="004"
@@ -221,7 +221,7 @@ export default function SaveSquadCaseStudyPage() {
               }
             />
 
-            <div className="mt-16 grid gap-10 border-t border-black/10 pt-10 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="mt-12 grid gap-8 border-t border-black/10 pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-[0.8fr_1.2fr]">
               <p className="sld-label text-[#316bff]">Completed · Approved · Launched</p>
               <div>
                 <p className="sld-body-large max-w-3xl text-black/65">
