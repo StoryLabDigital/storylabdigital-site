@@ -15,6 +15,7 @@ export type WorkItem = {
   poster: string;
   featured: boolean;
   description: string;
+  caseStudy?: string;
 };
 
 export const workItems: WorkItem[] = [
@@ -32,13 +33,14 @@ export const workItems: WorkItem[] = [
   {
     slug: "save-squad",
     title: "Save Squad",
-    client: "Alexander Forbes",
+    client: "Alexforbes",
     category: "Learning",
     video: "/videos/save-squad.mp4",
     poster: "/posters/save-squad.jpeg",
     featured: true,
     description:
       "A youth-focused animated learning series designed to make financial lessons easier to understand and harder to forget.",
+    caseStudy: "/work/save-squad",
   },
   {
     slug: "reforms-in-the-roar",
@@ -153,7 +155,7 @@ export const workItems: WorkItem[] = [
   {
     slug: "af-karabo",
     title: "Karabo the Clever Crow",
-    client: "Alexander Forbes",
+    client: "Alexforbes",
     category: "Learning",
     video: "/videos/af-karabo.mp4",
     poster: "/posters/af-karabo.jpeg",

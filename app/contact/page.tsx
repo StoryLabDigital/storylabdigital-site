@@ -19,7 +19,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ContactPage() {
+type ContactPageProps = {
+  searchParams: Promise<{
+    project?: string | string[];
+  }>;
+};
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const projectParam = (await searchParams).project;
+  const initialProject = Array.isArray(projectParam)
+    ? projectParam[0] ?? ""
+    : projectParam ?? "";
+
   return (
     <div className="min-h-screen bg-[#f7f7f5] text-[#0b0f17]">
       <Header />
@@ -95,7 +106,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <ContactForm />
+            <ContactForm initialProject={initialProject} />
           </div>
         </section>
 

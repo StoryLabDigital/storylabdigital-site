@@ -34,10 +34,6 @@ export default function Header({
   const isDark = variant === "dark";
 
   useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
     if (!menuOpen) {
       document.body.style.overflow = "";
       return;
@@ -85,6 +81,7 @@ export default function Header({
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
         <Link
           href="/"
+          onClick={() => setMenuOpen(false)}
           aria-label="StoryLabDigital home"
           className="flex items-center gap-2 text-xl font-semibold tracking-[-0.04em]"
         >
@@ -184,6 +181,7 @@ export default function Header({
                 <Link
                   key={item.href}
                   href={item.href}
+                  onClick={() => setMenuOpen(false)}
                   aria-current={active ? "page" : undefined}
                   className={`grid grid-cols-[2.5rem_1fr_auto] items-center border-t py-6 ${mobileBorderClasses}`}
                 >
@@ -208,6 +206,7 @@ export default function Header({
           <div className={`mt-auto border-t pt-6 ${mobileBorderClasses}`}>
             <Link
               href="/contact"
+              onClick={() => setMenuOpen(false)}
               className={`flex min-h-12 w-full items-center justify-center border px-6 py-3.5 text-sm font-semibold transition-colors ${contactButtonClasses}`}
             >
               Start a conversation

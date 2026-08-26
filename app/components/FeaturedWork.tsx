@@ -2,13 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { featuredWork } from "@/data/work";
 
-export default function FeaturedWork() {
+type FeaturedWorkProps = {
+  excludeSlugs?: string[];
+};
+
+export default function FeaturedWork({
+  excludeSlugs = [],
+}: FeaturedWorkProps) {
+  const visibleWork = featuredWork.filter(
+    (item) => !excludeSlugs.includes(item.slug)
+  );
+
   return (
     <div className="mt-16 grid gap-px overflow-hidden bg-black/10 md:grid-cols-2">
-      {featuredWork.map((item, index) => {
+      {visibleWork.map((item, index) => {
         const isLeadItem = index === 0;
-        const supportingItemCount = featuredWork.length - 1;
-        const isLastItem = index === featuredWork.length - 1;
+        const supportingItemCount = visibleWork.length - 1;
+        const isLastItem = index === visibleWork.length - 1;
         const hasOddSupportingCount = supportingItemCount % 2 !== 0;
         const shouldSpanFullWidth =
           isLeadItem || (isLastItem && hasOddSupportingCount);
@@ -25,7 +35,7 @@ export default function FeaturedWork() {
               .join(" ")}
           >
             <Link
-              href={`/work#${item.slug}`}
+              href={item.caseStudy ?? `/work#${item.slug}`}
               aria-label={`View ${item.title}`}
               className="block"
             >

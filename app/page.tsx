@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import ClientLogoGrid from "./components/ClientLogoGrid";
@@ -254,7 +255,47 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <FeaturedWork />
+            <article className="mt-16 overflow-hidden bg-[#0b0f17] text-white">
+              <Link
+                href="/work/save-squad"
+                aria-label="Explore the Save Squad case study"
+                className="group grid lg:grid-cols-[1.2fr_0.8fr]"
+              >
+                <div className="relative aspect-video overflow-hidden bg-white lg:aspect-auto lg:min-h-[31rem]">
+                  <Image
+                    src="/save-squad/hero.webp"
+                    alt="Save Squad animated heroes created for Alexforbes"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 60vw"
+                    className="object-contain"
+                  />
+                </div>
+
+                <div className="flex flex-col justify-between gap-16 p-8 sm:p-10 lg:p-12">
+                  <div>
+                    <p className="sld-label text-[#6f97ff]">
+                      New case study · Alexforbes
+                    </p>
+                    <h3 className="sld-heading-three mt-7">
+                      Ten stories.
+                      <br />
+                      One animated learning world.
+                    </h3>
+                    <p className="mt-6 max-w-lg leading-7 text-white/62">
+                      How StoryLabDigital adapted financial-literacy stories
+                      into the complete ten-episode Save Squad series.
+                    </p>
+                  </div>
+
+                  <span className="sld-text-link w-fit text-white">
+                    Explore Save Squad
+                    <span aria-hidden="true">→</span>
+                  </span>
+                </div>
+              </Link>
+            </article>
+
+            <FeaturedWork excludeSlugs={["save-squad"]} />
           </div>
         </section>
 
