@@ -20,8 +20,15 @@ const initialForm: FormState = {
   message: "",
 };
 
-export default function ContactForm() {
-  const [form, setForm] = useState<FormState>(initialForm);
+type ContactFormProps = {
+  initialProject?: string;
+};
+
+export default function ContactForm({ initialProject = "" }: ContactFormProps) {
+  const [form, setForm] = useState<FormState>({
+    ...initialForm,
+    project: initialProject,
+  });
   const [status, setStatus] = useState<
     "idle" | "sending" | "sent" | "error"
   >("idle");
