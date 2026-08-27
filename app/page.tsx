@@ -9,9 +9,6 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import SectionHeading from "./components/SectionHeading";
 import Testimonials from "./components/Testimonials";
-import VideoFrame from "./components/VideoFrame";
-
-import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Ideas Worth Remembering",
@@ -169,30 +166,64 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="border-y border-black/10 bg-white">
-          <div className="sld-container py-8 sm:py-12">
-            <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <section className="border-y border-black/10 bg-white py-16 sm:py-20 lg:py-24">
+          <div className="sld-container">
+            <div className="mb-10 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="sld-label text-[#316bff]">Featured film</p>
+                <p className="sld-label text-[#316bff]">
+                  Quill&apos;s Special Showcase
+                </p>
                 <h2 className="mt-3 text-3xl font-light tracking-[-0.04em] sm:text-4xl">
-                  What If
-                  <span className="text-[#316bff]">?</span>
+                  Save Squad
+                  <span className="text-[#316bff]">.</span>
                 </h2>
               </div>
 
               <p className="max-w-md text-sm leading-6 text-black/50">
-                A question led film about possibility, curiosity and the
-                courage to explore before everything makes sense.
+                Ten stories. One animated learning world. The project Quill
+                keeps pointing at when someone asks what StoryLabDigital can do.
               </p>
             </div>
 
-            <VideoFrame
-              src={siteConfig.assets.whatIfVideo}
-              poster={siteConfig.assets.whatIfPoster}
-              title="What If — StoryLabDigital brand film"
-              controls
-              priority
-            />
+            <article className="overflow-hidden bg-[#0b0f17] text-white">
+              <Link
+                href="/work/save-squad"
+                aria-label="View the full Save Squad case study"
+                className="group grid lg:grid-cols-[1.2fr_0.8fr]"
+              >
+                <div className="relative aspect-video overflow-hidden bg-white lg:aspect-auto lg:min-h-[31rem]">
+                  <Image
+                    src="/save-squad/hero.webp"
+                    alt="Save Squad animated heroes created for Alexforbes"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 60vw"
+                    className="object-contain"
+                  />
+                </div>
+
+                <div className="flex flex-col justify-between gap-16 p-8 sm:p-10 lg:p-12">
+                  <div>
+                    <p className="sld-label text-[#6f97ff]">
+                      Case study · Alexforbes
+                    </p>
+                    <h3 className="sld-heading-three mt-7">
+                      Ten stories.
+                      <br />
+                      One animated learning world.
+                    </h3>
+                    <p className="mt-6 max-w-lg leading-7 text-white/62">
+                      How StoryLabDigital adapted financial-literacy stories
+                      into the complete ten-episode Save Squad series.
+                    </p>
+                  </div>
+
+                  <span className="sld-button sld-button-primary w-fit">
+                    View the full case study
+                    <span aria-hidden="true">→</span>
+                  </span>
+                </div>
+              </Link>
+            </article>
           </div>
         </section>
 
@@ -247,46 +278,6 @@ export default function HomePage() {
               />
 
             </div>
-
-            <article className="mt-16 overflow-hidden bg-[#0b0f17] text-white">
-              <Link
-                href="/work/save-squad"
-                aria-label="Explore the Save Squad case study"
-                className="group grid lg:grid-cols-[1.2fr_0.8fr]"
-              >
-                <div className="relative aspect-video overflow-hidden bg-white lg:aspect-auto lg:min-h-[31rem]">
-                  <Image
-                    src="/save-squad/hero.webp"
-                    alt="Save Squad animated heroes created for Alexforbes"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 60vw"
-                    className="object-contain"
-                  />
-                </div>
-
-                <div className="flex flex-col justify-between gap-16 p-8 sm:p-10 lg:p-12">
-                  <div>
-                    <p className="sld-label text-[#6f97ff]">
-                      New case study · Alexforbes
-                    </p>
-                    <h3 className="sld-heading-three mt-7">
-                      Ten stories.
-                      <br />
-                      One animated learning world.
-                    </h3>
-                    <p className="mt-6 max-w-lg leading-7 text-white/62">
-                      How StoryLabDigital adapted financial-literacy stories
-                      into the complete ten-episode Save Squad series.
-                    </p>
-                  </div>
-
-                  <span className="sld-button sld-button-primary w-fit">
-                    View the full case study
-                    <span aria-hidden="true">→</span>
-                  </span>
-                </div>
-              </Link>
-            </article>
 
             <FeaturedWork excludeSlugs={["save-squad"]} />
           </div>
