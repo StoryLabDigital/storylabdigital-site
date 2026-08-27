@@ -92,7 +92,7 @@ export default function Footer({
               href="https://www.40plus.co.za"
               target="_blank"
               rel="noreferrer"
-              className={`underline decoration-current/35 underline-offset-4 transition-colors ${linkClasses}`}
+              className="ml-1 inline-flex items-center border border-[#316bff]/35 bg-[#316bff]/10 px-2.5 py-1 font-bold text-[#316bff] underline decoration-[#316bff]/40 underline-offset-4 transition-colors hover:border-[#316bff] hover:bg-[#316bff] hover:text-white"
             >
               40 Plus Consulting
             </a>
