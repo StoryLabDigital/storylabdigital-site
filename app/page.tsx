@@ -232,7 +232,7 @@ export default function HomePage() {
 
         <section className="sld-section">
           <div className="sld-container">
-            <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+            <div>
               <SectionHeading
                 number="003"
                 label="Selected work"
@@ -246,13 +246,6 @@ export default function HomePage() {
                 text="Film, animation, AI-assisted production, learning and digital experiences built around the idea, not the format."
               />
 
-              <Link
-                href="/work"
-                className="sld-text-link w-fit shrink-0"
-              >
-                View all work
-                <span aria-hidden="true">→</span>
-              </Link>
             </div>
 
             <article className="mt-16 overflow-hidden bg-[#0b0f17] text-white">
@@ -287,8 +280,8 @@ export default function HomePage() {
                     </p>
                   </div>
 
-                  <span className="sld-text-link w-fit text-white">
-                    Explore Save Squad
+                  <span className="sld-button sld-button-primary w-fit">
+                    View the full case study
                     <span aria-hidden="true">→</span>
                   </span>
                 </div>
