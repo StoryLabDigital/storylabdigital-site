@@ -20,7 +20,7 @@ const navigation = [
     href: "/field-notes",
   },
   {
-    label: "The Lab",
+    label: "The Lab · Get a quote",
     href: "/the-lab",
   },
 ];

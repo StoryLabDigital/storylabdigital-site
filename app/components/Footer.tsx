@@ -86,6 +86,18 @@ export default function Footer({
         <div
           className={`text-sm sm:col-span-2 lg:col-span-1 lg:text-right ${mutedClasses}`}
         >
+          <p className="mb-3 max-w-md leading-6 lg:ml-auto">
+            StoryLabDigital is the creative studio of{" "}
+            <a
+              href="https://www.40plus.co.za"
+              target="_blank"
+              rel="noreferrer"
+              className="ml-1 inline-flex items-center border border-[#316bff]/35 bg-[#316bff]/10 px-2.5 py-1 font-bold text-[#316bff] underline decoration-[#316bff]/40 underline-offset-4 transition-colors hover:border-[#316bff] hover:bg-[#316bff] hover:text-white"
+            >
+              40 Plus Consulting
+            </a>
+            .
+          </p>
           <p>© {new Date().getFullYear()} StoryLabDigital</p>
           <p className="mt-2 text-xs uppercase tracking-[0.2em]">
             Different. On Purpose.
