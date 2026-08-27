@@ -86,8 +86,8 @@ export default function FieldNotesPage() {
             </div>
 
             <Image
-              src="/quill/quill-coffee.webp"
-              alt="Quill, StoryLabDigital Employee Number One"
+              src="/quill/quill-field-notes.webp"
+              alt="Quill holding a field notebook and coffee"
               width={320}
               height={480}
               className="h-auto w-full object-contain drop-shadow-2xl"
