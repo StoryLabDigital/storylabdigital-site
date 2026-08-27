@@ -242,7 +242,7 @@ export default function TheLabPage() {
         </section>
 
         {/* Introduction */}
-        <section className="py-24 sm:py-28 lg:py-36">
+        <section className="py-20 sm:py-24 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
               <div>
@@ -280,7 +280,7 @@ export default function TheLabPage() {
         {/* Examples */}
         <section
           id="examples"
-          className="scroll-mt-24 border-y border-white/10 bg-white/[0.025] py-24 sm:py-28 lg:py-36"
+          className="scroll-mt-24 border-y border-white/10 bg-white/[0.025] py-20 sm:py-24 lg:py-28"
         >
           <SectionHeading
             number="002"
@@ -360,7 +360,7 @@ export default function TheLabPage() {
         </section>
 
         {/* Process */}
-        <section className="py-24 sm:py-28 lg:py-36">
+        <section className="py-20 sm:py-24 lg:py-28">
           <SectionHeading
             number="003"
             label="How it works"
@@ -398,7 +398,7 @@ export default function TheLabPage() {
         </section>
 
         {/* Services */}
-        <section className="border-y border-white/10 bg-white/[0.025] py-24 sm:py-28 lg:py-36">
+        <section className="border-y border-white/10 bg-white/[0.025] py-20 sm:py-24 lg:py-28">
           <SectionHeading
             number="004"
             label="What you can request"
@@ -452,7 +452,7 @@ export default function TheLabPage() {
         </section>
 
         {/* Fit */}
-        <section className="py-24 sm:py-28 lg:py-36">
+        <section className="py-20 sm:py-24 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="flex items-center gap-4 text-xs font-semibold uppercase tracking-[0.28em] text-white/45">
               <span className="text-[#316bff]">005</span>
@@ -526,7 +526,7 @@ export default function TheLabPage() {
         {/* Request form */}
         <section
           id="request"
-          className="scroll-mt-24 py-24 sm:py-28 lg:py-36"
+          className="scroll-mt-24 py-20 sm:py-24 lg:py-28"
         >
           <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20 lg:px-10">
             <div>
