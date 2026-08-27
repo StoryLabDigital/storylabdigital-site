@@ -83,4 +83,9 @@ export const saveSquadTestimonial: null | {
   quote: string;
   name: string;
   role: string;
-} = null;
+} = {
+  quote:
+    "Chris Combrinck was the driving creative force behind the Save Squad animated series. His passion, creativity and commitment to excellence helped transform our financial literacy stories into an engaging 10-episode series that children can both enjoy and learn from. Chris was a true partner throughout the journey, always willing to go the extra mile to ensure the final product exceeded expectations. His enthusiasm and dedication brought our vision to life, creating a vibrant animated series that makes financial education accessible, engaging and memorable for children. Working with Chris was an absolute pleasure, and we are incredibly proud of what we achieved together.",
+  name: "Joannie Maass",
+  role: "Senior Technical Investment Specialist, Alexforbes",
+};
