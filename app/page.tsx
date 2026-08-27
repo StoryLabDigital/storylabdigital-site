@@ -148,21 +148,49 @@ export default function HomePage() {
         </section>
 
         <section className="sld-section">
-          <div className="sld-container">
-            <SectionHeading
-              number="001"
-              label="A note on attention"
-              title={
-                <>
-                  Most businesses do not need more content.
-                  <br />
-                  <span className="text-[#316bff]">
-                    They need something worth remembering.
-                  </span>
-                </>
-              }
-              text="We do not begin with cameras. We do not begin with software. We begin with curiosity."
-            />
+          <div className="sld-container grid items-end gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+            <div>
+              <div className="flex items-center gap-4 text-xs font-semibold uppercase tracking-[0.28em] text-black/45">
+                <span className="text-[#316bff]">001</span>
+                <span>A note on curiosity</span>
+              </div>
+
+              <h2 className="mt-8 max-w-4xl text-4xl font-light leading-[1.03] tracking-[-0.05em] sm:text-6xl lg:text-[4.5rem]">
+                Question everything.
+                <br />
+                <span className="text-[#316bff]">
+                  Especially the obvious.
+                </span>
+              </h2>
+
+              <p className="mt-7 max-w-2xl text-base leading-8 text-black/55 sm:text-lg">
+                Most businesses do not need more content. They need something
+                worth remembering. We do not begin with cameras or software.
+                We begin with curiosity.
+              </p>
+            </div>
+
+            <figure className="mx-auto w-full max-w-sm lg:max-w-md">
+              <div className="relative mx-auto aspect-[2/3] w-full max-w-[22rem]">
+                <Image
+                  src="/quill/quill-coffee.webp"
+                  alt="Quill, StoryLabDigital Employee Number One, holding his coffee"
+                  fill
+                  sizes="(max-width: 1024px) 352px, 448px"
+                  className="object-contain object-bottom"
+                />
+              </div>
+
+              <figcaption className="border-t border-black/15 pt-5">
+                <p className="sld-label text-[#316bff]">
+                  Quill · Employee #1
+                </p>
+                <p className="mt-2 max-w-sm font-mono text-xs leading-6 text-black/50 sm:text-sm">
+                  Collected the questions. Misplaced the answers. Kept the
+                  coffee.
+                </p>
+              </figcaption>
+            </figure>
           </div>
         </section>
 
