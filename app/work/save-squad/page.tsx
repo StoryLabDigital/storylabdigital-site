@@ -252,15 +252,39 @@ export default function SaveSquadCaseStudyPage() {
         </section>
 
         {saveSquadTestimonial ? (
-          <section className="border-y border-black/10 bg-white py-20 sm:py-24">
-            <div className="sld-container">
-              <p className="sld-label text-[#316bff]">Client voice</p>
-              <blockquote className="sld-heading-three mt-8 max-w-5xl">
-                “{saveSquadTestimonial.quote}”
-              </blockquote>
-              <p className="mt-8 text-sm text-black/55">
-                {saveSquadTestimonial.name} · {saveSquadTestimonial.role}
-              </p>
+          <section className="overflow-hidden bg-[#0b0f17] py-20 text-white sm:py-24 lg:py-28">
+            <div className="sld-container grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+              <div className="relative">
+                <p className="sld-label text-[#6f97ff]">In their words</p>
+                <h2 className="sld-heading-two mt-7 max-w-md">
+                  The work speaks.
+                  <br />
+                  So does the client
+                  <span className="text-[#316bff]">.</span>
+                </h2>
+
+                <span
+                  aria-hidden="true"
+                  className="mt-10 block text-[8rem] font-light leading-[0.65] text-[#316bff] sm:text-[10rem]"
+                >
+                  “
+                </span>
+              </div>
+
+              <div className="border-t border-white/15 pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-1">
+                <blockquote className="max-w-4xl text-xl font-light leading-[1.55] tracking-[-0.02em] text-white/82 sm:text-2xl lg:text-[1.75rem]">
+                  {saveSquadTestimonial.quote}
+                </blockquote>
+
+                <div className="mt-10 border-t border-white/15 pt-7">
+                  <p className="text-2xl font-medium tracking-[-0.035em] text-white sm:text-3xl">
+                    {saveSquadTestimonial.name}
+                  </p>
+                  <p className="mt-2 text-base leading-6 text-white/55 sm:text-lg">
+                    {saveSquadTestimonial.role}
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
         ) : null}
