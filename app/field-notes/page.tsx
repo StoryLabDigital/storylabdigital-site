@@ -68,20 +68,30 @@ export default function FieldNotesPage() {
             </p>
           </div>
 
-          <div className="border-l border-white/15 pl-6">
-            <p className="text-xs uppercase tracking-[0.3em] text-white/35">
-              Filed by
-            </p>
+          <div className="grid grid-cols-[1fr_7.5rem] items-end gap-4 border-l border-white/15 pl-6 sm:grid-cols-[1fr_9rem]">
+            <div className="pb-2">
+              <p className="text-xs uppercase tracking-[0.3em] text-white/35">
+                Filed by
+              </p>
 
-            <p className="mt-3 text-2xl font-light">Quill</p>
+              <p className="mt-3 text-2xl font-light">Quill</p>
 
-            <p className="mt-2 text-sm leading-relaxed text-white/45">
-              Employee #1
-              <br />
-              StoryLabDigital
-              <br />
-              Cape Town
-            </p>
+              <p className="mt-2 text-sm leading-relaxed text-white/45">
+                Employee #1
+                <br />
+                StoryLabDigital
+                <br />
+                Cape Town
+              </p>
+            </div>
+
+            <Image
+              src="/quill/quill-coffee.webp"
+              alt="Quill, StoryLabDigital Employee Number One"
+              width={320}
+              height={480}
+              className="h-auto w-full object-contain drop-shadow-2xl"
+            />
           </div>
         </div>
 
