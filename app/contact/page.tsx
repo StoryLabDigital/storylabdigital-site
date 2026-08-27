@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -123,6 +124,20 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             <p className="sld-body-large mt-7 max-w-2xl text-black/58">
               We do not force every request into a service package. The right
               format comes after the right question.
+            </p>
+
+            <p className="mt-7 max-w-2xl border-t border-black/10 pt-7 text-base leading-7 text-black/58 sm:text-lg">
+              Need a website, Shopify store or a system built, not just a story
+              told? That&apos;s{" "}
+              <Link
+                href="https://www.40plus.co.za"
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-[#0b0f17] underline decoration-[#316bff]/45 underline-offset-4 transition-colors hover:text-[#316bff]"
+              >
+                40 Plus Consulting
+              </Link>
+              .
             </p>
           </div>
         </section>
