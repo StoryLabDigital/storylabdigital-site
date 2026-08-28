@@ -17,18 +17,18 @@ const services = [
     title: "Film & campaign content",
     text: "Brand films, campaigns and stories built around something worth saying.",
     detail: "Film · Campaigns · Branded stories",
-    icon: "REC",
-    position: "lg:left-0 lg:top-[9%] lg:w-[30%] xl:w-[28%]",
+    visual: "film",
+    position: "lg:left-0 lg:top-[7%] lg:w-[31%] xl:w-[29%]",
     direction: -34,
-    range: [0.0, 0.08],
+    range: [0, 0.08],
   },
   {
     number: "02",
     title: "Animated learning",
     text: "Complex ideas turned into learning people actually want to finish.",
     detail: "Save Squad · Training · Academies",
-    icon: "▶",
-    position: "lg:right-0 lg:top-[7%] lg:w-[30%] xl:w-[28%]",
+    visual: "learning",
+    position: "lg:right-0 lg:top-[6%] lg:w-[31%] xl:w-[29%]",
     direction: 34,
     range: [0.12, 0.24],
   },
@@ -37,8 +37,8 @@ const services = [
     title: "Explainers & awareness",
     text: "Cyber awareness, change, internal communication and complex ideas made human.",
     detail: "Awareness · Change · Internal comms",
-    icon: "↗",
-    position: "lg:left-[1%] lg:bottom-[29%] lg:w-[29%] xl:w-[27%]",
+    visual: "awareness",
+    position: "lg:left-[1%] lg:bottom-[25%] lg:w-[30%] xl:w-[28%]",
     direction: -34,
     range: [0.28, 0.4],
   },
@@ -47,30 +47,57 @@ const services = [
     title: "AI-assisted production",
     text: "Concept art, characters, voice and rapid content. New tools without sacrificing the craft.",
     detail: "Concept art · Characters · Voice",
-    icon: "AI",
-    position: "lg:right-[1%] lg:bottom-[28%] lg:w-[30%] xl:w-[28%]",
+    visual: "ai",
+    position: "lg:right-[1%] lg:bottom-[24%] lg:w-[30%] xl:w-[28%]",
     direction: 34,
     range: [0.44, 0.56],
-  },
-  {
-    number: "05",
-    title: "Learning experiences",
-    text: "From onboarding and internal training to complete digital academies.",
-    detail: "Strategy → Content → Platform → Learning",
-    icon: "→",
-    position: "lg:left-[11%] lg:bottom-[18%] lg:w-[78%]",
-    direction: 0,
-    range: [0.6, 0.72],
   },
 ] as const;
 
 type Service = (typeof services)[number];
 
-function ServiceVisual({ icon }: { icon: Service["icon"] }) {
+function ServiceIllustration({ type }: { type: Service["visual"] }) {
+  if (type === "film") {
+    return (
+      <div className="relative h-[5.2rem] w-[7rem] shrink-0" aria-hidden="true">
+        <span className="absolute right-0 top-1 h-14 w-16 rotate-[-7deg] rounded-full bg-[#316bff]/10" />
+        <span className="absolute left-2 top-6 h-9 w-14 rounded-md border-2 border-[#0b0f17]/75 bg-[#0b0f17]/5" />
+        <span className="absolute left-[3.65rem] top-[2.15rem] h-7 w-7 rounded-full border-[5px] border-[#316bff] bg-white shadow-sm" />
+        <span className="absolute left-0 top-4 h-2 w-7 rounded-full bg-[#0b0f17]/75" />
+        <span className="absolute bottom-1 left-4 h-1 w-20 rotate-[-7deg] rounded-full bg-[#316bff]" />
+      </div>
+    );
+  }
+
+  if (type === "learning") {
+    return (
+      <div className="relative h-[5.2rem] w-[7rem] shrink-0" aria-hidden="true">
+        <span className="absolute inset-x-1 top-2 h-[4.15rem] rounded-xl border border-[#316bff]/20 bg-[#eef3ff] shadow-sm" />
+        <span className="absolute left-3 top-4 h-8 w-10 rounded-lg bg-white" />
+        <span className="absolute right-3 top-4 h-8 w-10 rounded-lg bg-[#316bff]/10" />
+        <span className="absolute left-1/2 top-[1.9rem] flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full bg-[#316bff] text-[0.65rem] text-white">▶</span>
+        <span className="absolute bottom-1 right-0 h-8 w-8 rounded-full bg-[#316bff]/10" />
+      </div>
+    );
+  }
+
+  if (type === "awareness") {
+    return (
+      <div className="relative h-[5.2rem] w-[7rem] shrink-0" aria-hidden="true">
+        <span className="absolute left-4 top-4 h-12 w-12 rotate-[-18deg] rounded-[50%_45%_45%_50%] border-[5px] border-[#316bff] bg-white" />
+        <span className="absolute left-[3.35rem] top-[2.7rem] h-3 w-10 rotate-[28deg] rounded-full bg-[#316bff]" />
+        <span className="absolute right-1 top-2 h-1 w-8 rotate-[-20deg] rounded-full bg-[#316bff]" />
+        <span className="absolute right-0 top-6 h-1 w-7 rounded-full bg-[#316bff]" />
+      </div>
+    );
+  }
+
   return (
-    <div className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-[#eef3ff] text-sm font-semibold tracking-[0.08em] text-[#316bff] sm:h-16 sm:w-16">
-      <span className="absolute -right-3 -top-3 h-10 w-10 rounded-full bg-[#316bff]/10" />
-      <span className="relative">{icon}</span>
+    <div className="relative h-[5.2rem] w-[7rem] shrink-0" aria-hidden="true">
+      <span className="absolute left-2 top-3 h-14 w-[5.6rem] rounded-xl border border-[#316bff]/20 bg-[#eef3ff] shadow-sm" />
+      <span className="absolute right-0 top-0 flex h-10 w-10 rotate-[5deg] items-center justify-center rounded-xl bg-[#316bff] text-sm font-semibold text-white shadow-lg">AI</span>
+      <span className="absolute bottom-2 left-6 h-1 w-16 rounded-full bg-[#0b0f17]/70" />
+      <span className="absolute left-[2.15rem] top-[2.15rem] h-6 w-6 rounded-full border-[4px] border-[#316bff]" />
     </div>
   );
 }
@@ -87,51 +114,89 @@ function ServiceCard({
   const inputRange = [...service.range];
   const opacity = useTransform(progress, inputRange, [0, 1]);
   const x = useTransform(progress, inputRange, [service.direction, 0]);
-  const y = useTransform(
-    progress,
-    inputRange,
-    [service.number === "05" ? 22 : 10, 0],
-  );
-
-  const isWide = service.number === "05";
+  const y = useTransform(progress, inputRange, [10, 0]);
 
   return (
     <motion.article
       style={reduceMotion ? undefined : { opacity, x, y }}
-      className={`relative z-30 mb-5 overflow-hidden rounded-[1.4rem] border border-black/10 bg-white/98 p-6 shadow-[0_22px_70px_rgba(11,15,23,0.10)] sm:p-7 lg:absolute lg:mb-0 ${service.position}`}
+      className={`relative z-30 mb-5 overflow-hidden rounded-[1.7rem] border border-black/10 bg-white p-6 shadow-[0_26px_80px_rgba(11,15,23,0.10)] sm:p-7 lg:absolute lg:mb-0 ${service.position}`}
     >
-      <span className="pointer-events-none absolute -right-10 -top-12 h-28 w-28 rounded-full bg-[#316bff]/5" />
-      <div className={isWide ? "grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center" : ""}>
-        <div>
-          <div className="flex items-start justify-between gap-5">
-            <div>
-              <p className="sld-label text-[#316bff]">{service.number}</p>
-              <h3 className="mt-3 text-2xl font-medium leading-[1.04] tracking-[-0.045em] sm:text-[1.8rem]">
-                {service.title}
-              </h3>
-            </div>
-            <ServiceVisual icon={service.icon} />
-          </div>
-          <p className="mt-3 max-w-[36rem] leading-6 text-black/55">{service.text}</p>
-          <p className="mt-5 border-t border-black/10 pt-3 font-mono text-[0.65rem] uppercase leading-5 tracking-[0.1em] text-black/38">
-            {service.detail}
-          </p>
+      <span className="pointer-events-none absolute -right-8 -top-10 h-28 w-28 rounded-full bg-[#316bff]/5" />
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0 flex-1">
+          <p className="sld-label text-[#316bff]">{service.number}</p>
+          <h3 className="mt-3 text-[1.65rem] font-medium leading-[1.01] tracking-[-0.05em] sm:text-[1.9rem]">
+            {service.title}
+          </h3>
         </div>
-        {isWide ? (
-          <div className="hidden items-center gap-3 pr-2 lg:flex" aria-hidden="true">
-            {["Strategy", "Content", "Platform", "Learning"].map((step, index) => (
-              <div key={step} className="flex items-center gap-3">
-                <div className="text-center">
-                  <div className="mx-auto h-8 w-8 rounded-full border border-[#316bff]/25 bg-[#eef3ff]" />
-                  <p className="mt-2 font-mono text-[0.58rem] uppercase tracking-[0.08em] text-black/40">{step}</p>
-                </div>
-                {index < 3 ? <span className="text-[#316bff]">→</span> : null}
-              </div>
-            ))}
-          </div>
-        ) : null}
+        <ServiceIllustration type={service.visual} />
       </div>
+      <p className="mt-3 max-w-[28rem] leading-6 text-black/55">{service.text}</p>
+      <p className="mt-5 border-t border-black/10 pt-3 font-mono text-[0.62rem] uppercase leading-5 tracking-[0.1em] text-black/38">
+        {service.detail}
+      </p>
+      <span aria-hidden="true" className="absolute bottom-5 right-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#eef3ff] text-[#316bff]">→</span>
     </motion.article>
+  );
+}
+
+function QuillDirector({ reduceMotion, opacity, scale }: {
+  reduceMotion: boolean | null;
+  opacity: MotionValue<number>;
+  scale: MotionValue<number>;
+}) {
+  return (
+    <motion.figure
+      style={reduceMotion ? undefined : { opacity, scale }}
+      className="relative z-10 mx-auto mb-10 w-full max-w-[17rem] lg:absolute lg:left-1/2 lg:top-[2%] lg:mb-0 lg:w-[27%] lg:max-w-[21rem] lg:-translate-x-1/2"
+    >
+      <div className="relative mx-auto h-[31rem] w-full max-w-[20rem] sm:h-[33rem] lg:h-[32rem]">
+        <div aria-hidden="true" className="absolute bottom-[4.1rem] left-1/2 z-0 h-[13.5rem] w-[15rem] -translate-x-1/2">
+          <div className="absolute left-[1.55rem] top-0 h-[9.2rem] w-2 rotate-[7deg] rounded-full bg-[#7a4d28]" />
+          <div className="absolute right-[1.55rem] top-0 h-[9.2rem] w-2 -rotate-[7deg] rounded-full bg-[#7a4d28]" />
+          <div className="absolute left-1/2 top-[4.8rem] h-5 w-[13.2rem] -translate-x-1/2 rounded bg-[#b57b40] shadow-sm" />
+          <div className="absolute left-[2rem] top-[3.1rem] h-3 w-[4.2rem] rounded bg-[#b57b40]" />
+          <div className="absolute right-[2rem] top-[3.1rem] h-3 w-[4.2rem] rounded bg-[#b57b40]" />
+          <div className="absolute bottom-0 left-[2.2rem] h-2 w-[10rem] rotate-[38deg] rounded-full bg-[#5a3923]" />
+          <div className="absolute bottom-0 right-[2.2rem] h-2 w-[10rem] -rotate-[38deg] rounded-full bg-[#5a3923]" />
+        </div>
+
+        <div className="absolute inset-x-0 top-0 z-10 h-[26.5rem] overflow-hidden">
+          <Image
+            src="/quill/quill-field-notes.webp"
+            alt="Quill, StoryLabDigital Employee Number One, presenting the studio services"
+            fill
+            sizes="(max-width: 1024px) 272px, 336px"
+            className="object-contain object-top"
+          />
+        </div>
+
+        <div aria-hidden="true" className="absolute right-[0.4rem] top-[11.2rem] z-20 h-[5rem] w-[5rem] rotate-[8deg] rounded-full border-[0.72rem] border-[#f59ab2] bg-[#f7c45b] shadow-[0_8px_25px_rgba(11,15,23,0.13)]">
+          <span className="absolute left-[0.1rem] top-[0.2rem] h-1 w-2 rotate-[20deg] rounded-full bg-[#316bff]" />
+          <span className="absolute right-[0.25rem] top-[0.6rem] h-1 w-2 rotate-[-20deg] rounded-full bg-[#ff7c42]" />
+          <span className="absolute bottom-[0.4rem] left-[0.7rem] h-1 w-2 rotate-[35deg] rounded-full bg-white" />
+          <span className="absolute bottom-[0.55rem] right-[0.35rem] h-1 w-2 rotate-[-28deg] rounded-full bg-[#316bff]" />
+        </div>
+
+        <div className="pointer-events-none absolute bottom-[3.8rem] left-0 right-0 z-20 h-[9rem] bg-gradient-to-t from-[#f7f7f5] via-[#f7f7f5]/94 to-transparent" />
+        <div aria-hidden="true" className="absolute bottom-[5.8rem] left-1/2 z-30 h-[4.7rem] w-[9.4rem] -translate-x-1/2 rounded-[50%] bg-[#d6a16d]/12 blur-xl" />
+      </div>
+
+      <div aria-hidden="true" className="pointer-events-none absolute left-[-2.4rem] top-[8rem] hidden rotate-[-8deg] lg:block">
+        <div className="h-1 w-11 rounded-full bg-[#316bff]" />
+        <div className="mt-2 h-1 w-8 translate-x-2 rotate-[18deg] rounded-full bg-[#316bff]" />
+      </div>
+      <div aria-hidden="true" className="pointer-events-none absolute right-[-4rem] top-[6rem] hidden rounded-2xl border border-black/10 bg-white/90 px-4 py-3 shadow-sm lg:block">
+        <p className="font-mono text-[0.6rem] uppercase tracking-[0.08em] text-black/45">Idea → Story → Impact</p>
+      </div>
+
+      <figcaption className="relative z-30 -mt-7 bg-[#f7f7f5] pt-3 text-center">
+        <p className="sld-label text-[#316bff]">Quill · Employee #1</p>
+        <p className="mt-2 font-mono text-xs leading-5 text-black/50 sm:text-sm">
+          Right. Apparently I&apos;m presenting this.
+        </p>
+      </figcaption>
+    </motion.figure>
   );
 }
 
@@ -140,16 +205,16 @@ export default function QuillServices() {
   const stageRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: stageRef,
-    offset: ["start 78%", "end 85%"],
+    offset: ["start 78%", "end 88%"],
   });
 
-  const quillOpacity = useTransform(scrollYProgress, [0, 0.04], [0.35, 1]);
-  const quillScale = useTransform(scrollYProgress, [0, 0.08], [0.96, 1]);
-  const conclusionOpacity = useTransform(scrollYProgress, [0.74, 0.84], [0, 1]);
-  const conclusionY = useTransform(scrollYProgress, [0.74, 0.84], [14, 0]);
+  const quillOpacity = useTransform(scrollYProgress, [0, 0.04], [0.45, 1]);
+  const quillScale = useTransform(scrollYProgress, [0, 0.08], [0.97, 1]);
+  const learningOpacity = useTransform(scrollYProgress, [0.58, 0.7], [0, 1]);
+  const learningY = useTransform(scrollYProgress, [0.58, 0.7], [20, 0]);
 
   return (
-    <section className="overflow-hidden border-y border-black/10 bg-[#f7f7f5]">
+    <section className="border-y border-black/10 bg-[#f7f7f5]">
       <div className="sld-container pt-20 sm:pt-24 lg:pt-28">
         <div className="flex items-center gap-4 text-xs font-semibold uppercase tracking-[0.28em] text-black/45">
           <span className="text-[#316bff]">002.5</span>
@@ -168,49 +233,10 @@ export default function QuillServices() {
         </div>
       </div>
 
-      <div
-        ref={stageRef}
-        className="sld-container relative pb-16 pt-14 sm:pb-20 lg:h-[138svh] lg:pb-0 lg:pt-10"
-      >
-        <div className="lg:sticky lg:top-[calc(var(--header-height)+0.75rem)] lg:h-[calc(100svh-var(--header-height)-1.5rem)] lg:min-h-[740px]">
+      <div ref={stageRef} className="sld-container relative pt-12 lg:h-[118svh] lg:pt-8">
+        <div className="lg:sticky lg:top-[calc(var(--header-height)+0.6rem)] lg:h-[calc(100svh-var(--header-height)-1.2rem)] lg:min-h-[730px]">
           <div className="relative mx-auto h-full max-w-[1320px] lg:px-2">
-            <motion.figure
-              style={reduceMotion ? undefined : { opacity: quillOpacity, scale: quillScale }}
-              className="relative z-10 mx-auto mb-10 w-full max-w-[16rem] lg:absolute lg:left-1/2 lg:top-[5%] lg:mb-0 lg:w-[25%] lg:max-w-[20rem] lg:-translate-x-1/2"
-            >
-              <div className="relative mx-auto h-[29rem] w-full max-w-[19rem] overflow-hidden sm:h-[31rem] lg:h-[30rem]">
-                <div aria-hidden="true" className="absolute bottom-[4.5rem] left-1/2 z-0 h-[8.5rem] w-[12rem] -translate-x-1/2">
-                  <div className="absolute left-[1.2rem] top-[1rem] h-[6.2rem] w-2 rotate-[12deg] rounded-full bg-[#8c6037]" />
-                  <div className="absolute right-[1.2rem] top-[1rem] h-[6.2rem] w-2 -rotate-[12deg] rounded-full bg-[#8c6037]" />
-                  <div className="absolute left-1/2 top-[2rem] h-4 w-[10.5rem] -translate-x-1/2 rounded bg-[#b8834d]" />
-                  <div className="absolute bottom-0 left-[2rem] h-2 w-[8.5rem] rotate-[34deg] rounded-full bg-[#5f4127]" />
-                  <div className="absolute bottom-0 right-[2rem] h-2 w-[8.5rem] -rotate-[34deg] rounded-full bg-[#5f4127]" />
-                </div>
-                <Image
-                  src="/quill/quill-field-notes.webp"
-                  alt="Quill, StoryLabDigital Employee Number One, presenting the studio services"
-                  fill
-                  sizes="(max-width: 1024px) 256px, 320px"
-                  className="relative z-10 object-contain object-top"
-                />
-                <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 h-[7.5rem] bg-gradient-to-t from-[#f7f7f5] via-[#f7f7f5]/92 to-transparent" />
-              </div>
-
-              <div aria-hidden="true" className="pointer-events-none absolute left-[-1.5rem] top-[7rem] hidden rotate-[-8deg] lg:block">
-                <div className="h-1 w-10 rounded-full bg-[#316bff]" />
-                <div className="mt-2 h-1 w-7 translate-x-2 rotate-[18deg] rounded-full bg-[#316bff]" />
-              </div>
-              <div aria-hidden="true" className="pointer-events-none absolute right-[-3rem] top-[5.5rem] hidden rounded-2xl border border-black/10 bg-white/80 px-4 py-3 shadow-sm lg:block">
-                <p className="font-mono text-[0.6rem] uppercase tracking-[0.08em] text-black/45">Idea → Story → Impact</p>
-              </div>
-
-              <figcaption className="relative z-30 -mt-7 bg-[#f7f7f5] pt-3 text-center">
-                <p className="sld-label text-[#316bff]">Quill · Employee #1</p>
-                <p className="mt-2 font-mono text-xs leading-5 text-black/50 sm:text-sm">
-                  Right. Apparently I&apos;m presenting this.
-                </p>
-              </figcaption>
-            </motion.figure>
+            <QuillDirector reduceMotion={reduceMotion} opacity={quillOpacity} scale={quillScale} />
 
             <div className="lg:hidden">
               {services.map((service) => (
@@ -220,14 +246,14 @@ export default function QuillServices() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative z-20 mb-5 overflow-hidden rounded-[1.35rem] border border-black/10 bg-white p-6 shadow-[0_18px_60px_rgba(11,15,23,0.08)] sm:p-7"
+                  className="relative z-20 mb-5 overflow-hidden rounded-[1.55rem] border border-black/10 bg-white p-6 shadow-[0_18px_60px_rgba(11,15,23,0.08)] sm:p-7"
                 >
-                  <div className="flex items-start justify-between gap-5">
+                  <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="sld-label text-[#316bff]">{service.number}</p>
                       <h3 className="mt-3 text-2xl font-medium tracking-[-0.04em]">{service.title}</h3>
                     </div>
-                    <ServiceVisual icon={service.icon} />
+                    <ServiceIllustration type={service.visual} />
                   </div>
                   <p className="mt-3 leading-7 text-black/55">{service.text}</p>
                   <p className="mt-5 border-t border-black/10 pt-3 font-mono text-[0.65rem] uppercase leading-5 tracking-[0.1em] text-black/38">{service.detail}</p>
@@ -241,25 +267,53 @@ export default function QuillServices() {
               ))}
             </div>
 
-            <motion.div
-              style={reduceMotion ? undefined : { opacity: conclusionOpacity, y: conclusionY }}
-              className="mt-8 overflow-hidden rounded-[1.6rem] border border-[#0b0f17] bg-[#0b0f17] px-6 py-7 text-white shadow-[0_22px_70px_rgba(11,15,23,0.16)] sm:px-8 lg:absolute lg:bottom-[1.5%] lg:left-[5%] lg:right-[5%] lg:mt-0 lg:px-9 lg:py-8"
+            <motion.article
+              style={reduceMotion ? undefined : { opacity: learningOpacity, y: learningY }}
+              className="relative z-40 mt-5 overflow-hidden rounded-[1.7rem] border border-black/10 bg-white p-6 shadow-[0_26px_80px_rgba(11,15,23,0.10)] sm:p-7 lg:absolute lg:bottom-[2.5%] lg:left-[8%] lg:right-[8%] lg:mt-0 lg:px-8 lg:py-5"
             >
-              <div className="grid gap-6 lg:grid-cols-[0.75fr_auto_1.5fr_auto] lg:items-center">
-                <p className="rotate-[-2deg] text-lg italic leading-6 text-white/80">
-                  Still not sure
-                  <br />
-                  what you need?
-                </p>
-                <span className="hidden h-12 w-px bg-white/15 lg:block" />
-                <h3 className="text-3xl font-light tracking-[-0.045em] sm:text-4xl lg:text-center lg:text-[2.45rem]">
-                  <span className="text-[#6f97ff]">Good.</span> Start with the problem<span className="text-[#316bff]">.</span>
-                </h3>
-                <Link href="/contact" className="inline-flex w-fit items-center gap-5 rounded-full bg-[#316bff] px-6 py-4 text-sm font-semibold text-white transition hover:translate-x-0.5">
-                  Start a conversation <span aria-hidden="true">→</span>
-                </Link>
+              <div className="grid gap-6 lg:grid-cols-[1.15fr_1fr] lg:items-center">
+                <div className="flex items-start gap-5">
+                  <div className="hidden h-[5rem] w-[7rem] shrink-0 items-end gap-1 sm:flex" aria-hidden="true">
+                    {["Learn", "Engage", "Apply", "Grow"].map((label, index) => (
+                      <span key={label} className="flex h-[calc(2rem+var(--lift))] w-6 items-end justify-center rounded-t bg-[#0b0f17] pb-1 font-mono text-[0.42rem] uppercase text-white" style={{ "--lift": `${index * 0.35}rem` } as React.CSSProperties}>{label.slice(0, 1)}</span>
+                    ))}
+                  </div>
+                  <div>
+                    <p className="sld-label text-[#316bff]">05</p>
+                    <h3 className="mt-2 text-2xl font-medium tracking-[-0.045em] sm:text-[1.85rem]">Learning experiences</h3>
+                    <p className="mt-2 max-w-[34rem] leading-6 text-black/55">From onboarding and internal training to complete digital academies.</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-4 gap-3">
+                  {["Strategy", "Content", "Platform", "Learning"].map((step, index) => (
+                    <div key={step} className="relative text-center">
+                      <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-[#316bff]/20 bg-[#eef3ff] text-[#316bff]">{index + 1}</div>
+                      <p className="mt-2 font-mono text-[0.56rem] uppercase tracking-[0.08em] text-black/45">{step}</p>
+                      {index < 3 ? <span className="absolute -right-2 top-3 text-[#316bff]">→</span> : null}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </motion.div>
+            </motion.article>
+          </div>
+        </div>
+      </div>
+
+      <div className="sld-container relative z-20 -mt-[1px] pb-16 pt-4 sm:pb-20 lg:pt-6">
+        <div className="overflow-hidden rounded-[1.8rem] border border-[#0b0f17] bg-[#0b0f17] px-6 py-7 text-white shadow-[0_24px_80px_rgba(11,15,23,0.18)] sm:px-8 lg:px-10 lg:py-8">
+          <div className="grid gap-6 lg:grid-cols-[0.72fr_auto_1.45fr_auto] lg:items-center">
+            <p className="rotate-[-2deg] text-lg italic leading-6 text-white/80">
+              Still not sure
+              <br />
+              what you need?
+            </p>
+            <span className="hidden h-12 w-px bg-white/15 lg:block" />
+            <h3 className="text-3xl font-light tracking-[-0.045em] sm:text-4xl lg:text-center lg:text-[2.55rem]">
+              <span className="text-[#6f97ff]">Good.</span> Start with the problem<span className="text-[#316bff]">.</span>
+            </h3>
+            <Link href="/contact" className="inline-flex w-fit items-center gap-5 rounded-full bg-[#316bff] px-6 py-4 text-sm font-semibold text-white transition hover:translate-x-0.5">
+              Start a conversation <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </div>
