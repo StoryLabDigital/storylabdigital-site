@@ -7,6 +7,7 @@ import FeaturedWork from "./components/FeaturedWork";
 import FieldNotesFeature from "./components/FieldNotesFeature";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import QuillServices from "./components/QuillServices";
 import SectionHeading from "./components/SectionHeading";
 import Testimonials from "./components/Testimonials";
 
@@ -50,25 +51,6 @@ const principles = [
     number: "05",
     title: "Partnerships",
     text: "over transactions.",
-  },
-] as const;
-
-const formats = [
-  {
-    title: "Film & campaign content",
-    text: "Brand films and campaigns built around a question worth asking, not a brief worth filling.",
-  },
-  {
-    title: "Animated learning",
-    text: "Complex material turned into series people actually finish. Save Squad is ten episodes and counting.",
-  },
-  {
-    title: "Explainers & awareness content",
-    text: "Cyber-awareness, reform, internal comms. Made to land, not just inform.",
-  },
-  {
-    title: "AI-assisted production",
-    text: "Concept art, avatars, voice-over, rapid content. Faster, without the craft going missing.",
   },
 ] as const;
 
@@ -308,56 +290,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="sld-section border-y border-black/10 bg-[#f7f7f5]">
-          <div className="sld-container">
-            <SectionHeading
-              number="002.5"
-              label="What we make"
-              title={
-                <>
-                  Different formats.
-                  <br />
-                  One standard.
-                </>
-              }
-              text="Film, animation and AI-assisted production. The medium changes depending on the idea. The bar does not."
-            />
-
-            <div className="mt-20 grid border-t border-black/15 md:grid-cols-2">
-              {formats.map((format, index) => (
-                <article
-                  key={format.title}
-                  className={`border-b border-black/15 py-8 md:min-h-64 md:p-9 ${
-                    index % 2 === 0 ? "md:border-r" : ""
-                  }`}
-                >
-                  <p className="sld-label text-[#316bff]">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-8 text-2xl font-medium tracking-[-0.035em] sm:text-3xl">
-                    {format.title}
-                  </h3>
-                  <p className="mt-5 max-w-xl leading-7 text-black/55">
-                    {format.text}
-                  </p>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-12 flex flex-col gap-7 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-lg font-light tracking-[-0.02em] text-black/65">
-                Not sure which of these fits? Neither do most people, until we
-                talk.
-              </p>
-              <Link
-                href="/contact"
-                className="sld-button sld-button-primary w-fit"
-              >
-                Start a conversation
-              </Link>
-            </div>
-          </div>
-        </section>
+        <QuillServices />
 
         <section className="sld-section">
           <div className="sld-container">
@@ -374,7 +307,6 @@ export default function HomePage() {
                 }
                 text="Film, animation, AI-assisted production and learning built around the idea, not the format."
               />
-
             </div>
 
             <FeaturedWork excludeSlugs={["save-squad"]} />
