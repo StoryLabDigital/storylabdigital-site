@@ -70,9 +70,10 @@ function ServiceCard({
   progress: MotionValue<number>;
   reduceMotion: boolean | null;
 }) {
-  const opacity = useTransform(progress, service.range, [0, 1]);
-  const x = useTransform(progress, service.range, [service.direction, 0]);
-  const y = useTransform(progress, service.range, [service.number === "05" ? 24 : 10, 0]);
+  const inputRange = [...service.range];
+  const opacity = useTransform(progress, inputRange, [0, 1]);
+  const x = useTransform(progress, inputRange, [service.direction, 0]);
+  const y = useTransform(progress, inputRange, [service.number === "05" ? 24 : 10, 0]);
 
   return (
     <motion.article
