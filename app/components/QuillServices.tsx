@@ -8,7 +8,7 @@ export default function QuillServices() {
       <div className="sld-container">
         <div className="relative mx-auto w-full max-w-[1536px] overflow-hidden rounded-[1.6rem]">
           <img
-            src="/quill/quill-services-approved-768.jpg"
+            src="/quill/quill-services-approved.webp"
             alt="StoryLabDigital services with Quill seated in a director's chair holding coffee and a donut, surrounded by film, animated learning, awareness, AI-assisted production and learning experience services"
             className="block h-auto w-full"
           />
