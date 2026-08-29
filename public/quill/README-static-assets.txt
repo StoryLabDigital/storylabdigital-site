@@ -1,0 +1,1 @@
+Static final Quill services section uses a single approved visual asset to avoid inconsistent browser/image optimizer rendering.
